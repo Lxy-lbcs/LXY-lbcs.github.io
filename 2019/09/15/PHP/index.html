@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="落笔成殇的博客" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="PHP语法基础规则 php的代码部分全部要用半角的英文，使用全角的英文和符号会造成php代码报错。 一行代码写完，就必须要加分号。 在.php文件的时候，只用(a-zA-Z0-9)这些字符来命名文件。文件名不要用中文，不要用特殊符号，不要中间加空格，严格区分大小写">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP">
+<meta property="og:url" content="http://yoursite.com/2019/09/15/PHP/index.html">
+<meta property="og:site_name" content="落笔成殇的博客">
+<meta property="og:description" content="PHP语法基础规则 php的代码部分全部要用半角的英文，使用全角的英文和符号会造成php代码报错。 一行代码写完，就必须要加分号。 在.php文件的时候，只用(a-zA-Z0-9)这些字符来命名文件。文件名不要用中文，不要用特殊符号，不要中间加空格，严格区分大小写">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-15T06:30:10.040Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP">
+<meta name="twitter:description" content="PHP语法基础规则 php的代码部分全部要用半角的英文，使用全角的英文和符号会造成php代码报错。 一行代码写完，就必须要加分号。 在.php文件的时候，只用(a-zA-Z0-9)这些字符来命名文件。文件名不要用中文，不要用特殊符号，不要中间加空格，严格区分大小写">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/09/15/PHP/">
+
+
+
+
+
+  <title>PHP | 落笔成殇的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://your-url" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">落笔成殇的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/15/PHP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Joker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落笔成殇的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PHP</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-15T12:09:37+08:00">
+                2019-09-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="PHP语法"><a href="#PHP语法" class="headerlink" title="PHP语法"></a>PHP语法</h1><h2 id><a href="#" class="headerlink" title></a></h2><h4 id="基础规则"><a href="#基础规则" class="headerlink" title="基础规则"></a>基础规则</h4><ul>
+<li><strong>php的代码部分全部要用半角的英文，使用全角的英文和符号会造成php代码报错。</strong></li>
+<li><strong>一行代码写完，就必须要加分号。</strong></li>
+<li><strong>在.php文件的时候，只用(a-zA-Z0-9)这些字符来命名文件。文件名不要用中文，不要用特殊符号，不要中间加空格，严格区分大小写</strong><a id="more"></a>
+
+</li>
+</ul>
+<h4 id="变量的特点"><a href="#变量的特点" class="headerlink" title="变量的特点"></a>变量的特点</h4><ul>
+<li>必须要以<font color="#3dc">‘$‘</font>开始.如变量x必须要写成’$x’；</li>
+<li>变量的首字母不能以数字开始，只能以字母和下划线开头，变量名称只能包含数字字母下划线(a-zA-Z0-9)；</li>
+<li>变量的命名区分大小写；</li>
+<li>变量不要用特殊符号；</li>
+<li>变量命名最好有意义；</li>
+</ul>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h4 id="双引号和单引号的区别"><a href="#双引号和单引号的区别" class="headerlink" title="双引号和单引号的区别"></a>双引号和单引号的区别</h4><ul>
+<li>1、双引号解析变量，但是单引号不解析变量；</li>
+<li>2、在双引号里面插入变量，变量后面如果有英文或中文字符，它会把这个字符和变量拼接起来，视为一整个变量。一定要在变量后面接上特殊字符，例如空格等分开；</li>
+<li>3、如果在双引号里面插入变量的时候，后面不想有空格，可以拿大括号将变量包起来。</li>
+<li>4、双引号解析转义字符，单引号不解析转义字符。但，单引号能解析’和;</li>
+<li>5、单引号效率高于双引号，尽可能使用单引号；</li>
+<li>6、双引号和单引号可以互插！！！双引号当中插入单引号，单引号当中插入变量，这个变量会被解析；</li>
+<li>7、+号只代表数学运算，’.’用来链接字符串，</li>
+<li>8、将定界符声明字符串视为双引号一样的功能来看待。<blockquote>
+<p>字界符声明</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$dingjie = <span class="string">&lt;&lt;&lt;ABC</span></span><br><span class="line"><span class="string">如果</span></span><br><span class="line"><span class="string">    非要在这个滚犊子</span></span><br><span class="line"><span class="string">前</span></span><br><span class="line"><span class="string">    面&lt;br /&gt;</span></span><br><span class="line"><span class="string">    加上一段</span></span><br><span class="line"><span class="string">    &lt;i&gt;距离的话&lt;/i&gt;</span></span><br><span class="line"><span class="string">    我想说：&lt;h1&gt;思想有多远，你就给我滚多远&lt;/h1&gt;</span></span><br><span class="line"><span class="string">ABC;</span></span><br><span class="line"><span class="keyword">echo</span> $dingjie;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<blockquote>
+<p>栗：双引号解析变量，但是单引号不解析变量</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$jok = <span class="string">'笑溟沧海千钧破'</span>;</span><br><span class="line">$bat = <span class="string">"$jok 策定乾坤算因果"</span>;</span><br><span class="line"><span class="keyword">echo</span> $bat;  <span class="comment">//笑溟沧海千钧破 策定乾坤算因果;</span></span><br><span class="line">$bat = <span class="string">'$jok 策定乾坤算因果'</span>;</span><br><span class="line"><span class="keyword">echo</span> $bat;  <span class="comment">//$jok 策定乾坤算因果;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>栗：将定界符声明字符串视为双引号一样的功能来看待</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$weilai = <span class="string">'努力才有未来'</span>;</span><br><span class="line">$mimang = <span class="string">'迷茫的原因是没有目标'</span>;</span><br><span class="line">$dingjie = <span class="string">&lt;&lt;&lt;ABC</span></span><br><span class="line"><span class="string">如果</span></span><br><span class="line"><span class="string">        <span class="subst">$weilai</span></span></span><br><span class="line"><span class="string">    非要\t在这"个滚"犊子</span></span><br><span class="line"><span class="string">前</span></span><br><span class="line"><span class="string">        '<span class="subst">$mimang</span>'</span></span><br><span class="line"><span class="string">    面&lt;br /&gt;</span></span><br><span class="line"><span class="string">    加上\n一段</span></span><br><span class="line"><span class="string">    &lt;i&gt;距离的话&lt;/i&gt;</span></span><br><span class="line"><span class="string">    我想说：&lt;h1&gt;思想有多远，你就跟我滚多远&lt;/h1&gt;</span></span><br><span class="line"><span class="string">ABC;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> $dingjie;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>var_dump() 是一个函数。向括号()中间插入变量。这个函数，会打印出来数据累心，还会对应显示便令的长度和值。</p>
+</blockquote>
+<h3 id="NULL类型"><a href="#NULL类型" class="headerlink" title="NULL类型"></a>NULL类型</h3><blockquote>
+<p>主要有三种情况会产生空(null)类型;</p>
+</blockquote>
+<ul>
+<li>1、通过变量赋值明确指定变量的值为NULL；</li>
+<li>2、一个变量没有给任何值；</li>
+<li>3、使用函数unset()将变量销毁掉</li>
+</ul>
+<h4 id="empty-函数"><a href="#empty-函数" class="headerlink" title="empty()函数"></a>empty()函数</h4><blockquote>
+<p>empty()可以向括号中传入一个变量，这个变量的值如果为为false或者null的话，返回true；</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$apple = <span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">empty</span>($apple))&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">'笑溟沧海千钧破'</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">'策定乾坤算因果'</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//  笑溟沧海千钧破</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="isset-函数"><a href="#isset-函数" class="headerlink" title="isset()函数"></a>isset()函数</h4><blockquote>
+<p>isset()可以向括号中间传入一个或者多个变量，变量与变量见用都i好分开，只要有以恶个变量为null，则返回false。否则，则返回true；</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$jia = <span class="keyword">false</span>;</span><br><span class="line">$result = <span class="keyword">isset</span>($jia);</span><br><span class="line">var_dump($result);  <span class="comment">//bool(true)</span></span><br><span class="line"></span><br><span class="line">$one = <span class="number">10</span>;</span><br><span class="line">$two = <span class="keyword">false</span>;</span><br><span class="line">$three = <span class="number">0</span>;</span><br><span class="line">$four = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">$result =<span class="keyword">isset</span>($one,$two,$three,$four);</span><br><span class="line">var_dump($result);  <span class="comment">//bool(false)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="判断数据类型"><a href="#判断数据类型" class="headerlink" title="判断数据类型"></a>判断数据类型</h3><blockquote>
+<p>使用is_*系列函数。is_types这一系列的函数，来进行判断某个东西是不是某个类型，如果是这个类型返回真，不是这个类型返回假。</p>
+</blockquote>
+<ul>
+<li>1、gettype(传入一个变量)能够获得变量的类型</li>
+<li>2、var_dumo(传入一个变量)输出变量类型和值<table>
+<thead>
+<tr>
+<th align="left">判断</th>
+<th align="left">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">is_int</td>
+<td align="left">是非为整数</td>
+</tr>
+<tr>
+<td align="left">is_bool</td>
+<td align="left">是否为布尔值</td>
+</tr>
+<tr>
+<td align="left">is_float</td>
+<td align="left">是否为浮点数</td>
+</tr>
+<tr>
+<td align="left">is_string</td>
+<td align="left">是否是字符串</td>
+</tr>
+<tr>
+<td align="left">is_array</td>
+<td align="left">是否是数组</td>
+</tr>
+<tr>
+<td align="left">is_object</td>
+<td align="left">是否是对象</td>
+</tr>
+<tr>
+<td align="left">is_null</td>
+<td align="left">是否为空</td>
+</tr>
+<tr>
+<td align="left">is_resource</td>
+<td align="left">是否为资源</td>
+</tr>
+<tr>
+<td align="left">is_scalar</td>
+<td align="left">是否为标量</td>
+</tr>
+<tr>
+<td align="left">is_numeric</td>
+<td align="left">是否为数值类型</td>
+</tr>
+<tr>
+<td align="left">is_callable</td>
+<td align="left">是否为函数</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="数据类型转化"><a href="#数据类型转化" class="headerlink" title="数据类型转化"></a>数据类型转化</h4><ul>
+<li>1，整型的0为假，其他整型值全为真</li>
+<li>2, 浮点的0.0，布尔值的假。小数点后只要有一个非零的数值即为真。</li>
+<li>3，空字符串为假，只要里面有一个空格都算真。</li>
+<li>4，字符串的0，也将其看作是假。其他的都为真</li>
+<li>5，空数组也将其视为假，只要里面有一个值，就为真。</li>
+<li>6，空也为假</li>
+<li>7, 未声明成功的资源也为假</li>
+</ul>
+<h5 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h5><ul>
+<li>1、使用intval()、floatval()、strval()函数进行类型转换；</li>
+<li>2、变量前加上()里面写类型，将它转化后赋值给其它变量；</li>
+<li>3、settype(变量，类型)直接改变变量本身；</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$jok = <span class="number">1.23</span>;</span><br><span class="line">$bat = intval($jok);</span><br><span class="line">var_dump($bat); <span class="comment">//int(1)</span></span><br><span class="line">$jok = <span class="number">5</span>;</span><br><span class="line">$bat = floatval($jok);</span><br><span class="line">var_dump($bat); <span class="comment">//float(5)</span></span><br><span class="line">$jok = <span class="number">23</span>;</span><br><span class="line">$bat = strval($jok);</span><br><span class="line">var_dump($bat); <span class="comment">//string(2) "23"</span></span><br><span class="line"></span><br><span class="line">$transfer = <span class="number">12.8</span>;</span><br><span class="line">$jok = (int)$transfer;  <span class="comment">//int(12) </span></span><br><span class="line">var_dump($jok);    </span><br><span class="line">$jok = (bool) $transfer;</span><br><span class="line">var_dump($jok); <span class="comment">//bool(true)</span></span><br><span class="line">$bool = <span class="keyword">true</span>;</span><br><span class="line">$jok = (int)$bool;   </span><br><span class="line">var_dump($jok); <span class="comment">//int(1)</span></span><br><span class="line">$fo = <span class="number">250</span>;</span><br><span class="line">$jok = (<span class="keyword">array</span>)$fo;</span><br><span class="line">var_dump($jok); <span class="comment">//array(1) &#123; [0]=&gt; int(250) &#125;</span></span><br><span class="line"></span><br><span class="line">$fo = <span class="number">250.18</span>;</span><br><span class="line">settype($fo,<span class="string">'int'</span>);</span><br><span class="line">var_dump($fo);  <span class="comment">//int(250)</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>define(常量名，常量值)</p>
+<ul>
+<li>常量值只能为标量</li>
+<li>常量名可以小写，但是通常大写</li>
+<li>常量名可以不加引号，但是通常加上引号</li>
+<li>在字符串中调用常量的时候，必须在引号外面</li>
+<li>常量名建议只用字母和下划线<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="string">'MY_NAME'</span>,<span class="string">'Joker'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> MY_NAME;</span><br><span class="line"><span class="comment">//下面是错误的调用方式</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">'我的名字是MY_NAME'</span>;</span><br><span class="line"><span class="comment">//正确的调用方式该这么写</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">'I'</span> . <span class="string">'&amp;nbsp '</span> . MY_NAME;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">常量名</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">LINE</td>
+<td align="left">当前所在的行</td>
+</tr>
+<tr>
+<td align="left">FILE</td>
+<td align="left">当前文件在服务器的路径</td>
+</tr>
+<tr>
+<td align="left">FUNCTIOIN</td>
+<td align="left">当前函数名</td>
+</tr>
+<tr>
+<td align="left">CLASS</td>
+<td align="left">当前类名</td>
+</tr>
+<tr>
+<td align="left">METHOD</td>
+<td align="left">当前成员方法名</td>
+</tr>
+<tr>
+<td align="left">PHP_OS</td>
+<td align="left">PHP运行的操作系统</td>
+</tr>
+<tr>
+<td align="left">PHP_VERSION</td>
+<td align="left">当前PHP的版本</td>
+</tr>
+<tr>
+<td align="left">TRAIT</td>
+<td align="left">Trait 的名字,php5.4新加</td>
+</tr>
+<tr>
+<td align="left">DIR</td>
+<td align="left">文件所在的目录</td>
+</tr>
+<tr>
+<td align="left">NAMESPACE</td>
+<td align="left">当前命名空间的名称（区分大小写）</td>
+</tr>
+</tbody></table>
+<p><strong>待续…</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/10/面向对象/" rel="next" title="面向对象">
+                <i class="fa fa-chevron-left"></i> 面向对象
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/15/PHP操作数据库/" rel="prev" title="PHP操作数据库">
+                PHP操作数据库 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Joker</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP语法"><span class="nav-number">1.</span> <span class="nav-text">PHP语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.1.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基础规则"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">基础规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的特点"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">变量的特点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">1.1.1.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#双引号和单引号的区别"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">双引号和单引号的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NULL类型"><span class="nav-number">1.1.2.</span> <span class="nav-text">NULL类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#empty-函数"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">empty()函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#isset-函数"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">isset()函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断数据类型"><span class="nav-number">1.1.3.</span> <span class="nav-text">判断数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型转化"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">数据类型转化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#强制类型转换"><span class="nav-number">1.1.3.1.1.</span> <span class="nav-text">强制类型转换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常量"><span class="nav-number">1.1.4.</span> <span class="nav-text">常量</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joker</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
