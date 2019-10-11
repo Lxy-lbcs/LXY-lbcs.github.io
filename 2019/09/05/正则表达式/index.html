@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>正则表达式 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="正则表达式正则表达式中的特殊字符   字符 含义    \ 1、在非特殊字符之前的反斜杠表示下一个字符是特殊字符，不能按照字面量理解。无论字符出现在哪里，如果前面加了’&amp;#39;，将不再匹配任何字符，而是表示一个字符边界。  2、在特殊字符之前的反斜杠表示下一个字符不是特殊字符，应该按照字面理解。3、在字符串字面量中，反斜杠是反义字符。   ^ 匹配输入的开始，如果多行标志被设置为true，也匹配">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="http://yoursite.com/2019/09/05/正则表达式/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="正则表达式正则表达式中的特殊字符   字符 含义    \ 1、在非特殊字符之前的反斜杠表示下一个字符是特殊字符，不能按照字面量理解。无论字符出现在哪里，如果前面加了’&amp;#39;，将不再匹配任何字符，而是表示一个字符边界。  2、在特殊字符之前的反斜杠表示下一个字符不是特殊字符，应该按照字面理解。3、在字符串字面量中，反斜杠是反义字符。   ^ 匹配输入的开始，如果多行标志被设置为true，也匹配">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-15T10:45:49.018Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="正则表达式正则表达式中的特殊字符   字符 含义    \ 1、在非特殊字符之前的反斜杠表示下一个字符是特殊字符，不能按照字面量理解。无论字符出现在哪里，如果前面加了’&amp;#39;，将不再匹配任何字符，而是表示一个字符边界。  2、在特殊字符之前的反斜杠表示下一个字符不是特殊字符，应该按照字面理解。3、在字符串字面量中，反斜杠是反义字符。   ^ 匹配输入的开始，如果多行标志被设置为true，也匹配">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/05/正则表达式/" class="article-date">
+  <time datetime="2019-09-05T08:48:31.000Z" itemprop="datePublished">2019-09-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      正则表达式
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="正则表达式中的特殊字符"><a href="#正则表达式中的特殊字符" class="headerlink" title="正则表达式中的特殊字符"></a>正则表达式中的特殊字符</h2><table>
+<thead>
+<tr>
+<th align="left">字符</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">\</td>
+<td align="left">1、在非特殊字符之前的反斜杠表示下一个字符是特殊字符，不能按照字面量理解。无论字符出现在哪里，如果前面加了’&#39;，将不再匹配任何字符，而是表示一个字符边界。  2、在特殊字符之前的反斜杠表示下一个字符不是特殊字符，应该按照字面理解。3、在字符串字面量中，反斜杠是反义字符。</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">匹配输入的开始，如果多行标志被设置为true，也匹配换行符后紧跟的位置</td>
+</tr>
+<tr>
+<td align="left">$</td>
+<td align="left">匹配输入的结束，如果多行标志被设置为true，也匹配换行符前的位置</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">匹配前一个表达式0次或多次，等价于{0，}</td>
+</tr>
+<tr>
+<td align="left">+</td>
+<td align="left">匹配前一个表达式1次或多次，等价于{1，}</td>
+</tr>
+<tr>
+<td align="left">？</td>
+<td align="left">匹配前一个表达式0次或1次，等价于{0，1}，还用于先行断言中，如x(?=y)和x(?!y)</td>
+</tr>
+<tr>
+<td align="left">.</td>
+<td align="left">(小数点)默认匹配除换行符之外的任何单个字符</td>
+</tr>
+<tr>
+<td align="left">(x)</td>
+<td align="left">匹配’x’并记住匹配项，括号被称之为捕获括号</td>
+</tr>
+<tr>
+<td align="left">(?:x)</td>
+<td align="left">匹配’x’但是不记住匹配项。这种括号叫做非捕获括号，是的能够定义与正则表达式运算符一起使用的子表达式。例如：/foo{1,2}/,{1,2}只应用于’foo’的最后一个字符’o’;/(?:foo){1,2}/，{1,2}会应用于整个’foo’单词</td>
+</tr>
+<tr>
+<td align="left">x(?=y)</td>
+<td align="left">匹配’x’仅仅当’x’后跟着’y’，这种叫做先行断言</td>
+</tr>
+<tr>
+<td align="left">(?&lt;=y)x</td>
+<td align="left">匹配’x’仅仅当’x’前面是’y’，这种叫做后行断言</td>
+</tr>
+<tr>
+<td align="left">x(?!y)</td>
+<td align="left">仅仅当’x’后面不跟着’y’时匹配’x’，这被称之为正向否定查找。例如：/\d+(?!.)/.exec(‘3.141’)匹配’141’而不是u’3.141’</td>
+</tr>
+<tr>
+<td align="left">(?&lt;!y)x</td>
+<td align="left">仅仅当’x’前面不是’y’时撇皮’x’，这杯称之为反向否定查找</td>
+</tr>
+<tr>
+<td align="left">x</td>
+<td align="left">y</td>
+</tr>
+<tr>
+<td align="left">{n}</td>
+<td align="left">n是一个正整数，匹配了前面一个字符刚好出现了n次</td>
+</tr>
+<tr>
+<td align="left">{n,}</td>
+<td align="left">n是一个正整数，匹配前一个字符至少出现了n次</td>
+</tr>
+<tr>
+<td align="left">{n,m}</td>
+<td align="left">n和m都是整数，匹配前面的字符至少n次，最多m次。如果n或者m的值是0，这个值被忽略</td>
+</tr>
+<tr>
+<td align="left">[xyz]</td>
+<td align="left">一个字符集合，匹配方括号中的任意字符，包括转义序列。你可以使用破折号(-)来指定一个字符范围，</td>
+</tr>
+<tr>
+<td align="left">[^xyz]</td>
+<td align="left">一个反向字符集，匹配任何没有包含方括号中的字符，</td>
+</tr>
+<tr>
+<td align="left">[^\b]</td>
+<td align="left">匹配一个退格(U+0008)</td>
+</tr>
+<tr>
+<td align="left">\b</td>
+<td align="left">匹配一个词的开始或结束，使用”moon”举例：/\bm/匹配“moon”中的‘m’；/oo\b/并不匹配”moon”中的’oo’，因为’oo’被一个“字”字符’n’紧跟着。/oon\b/匹配”moon”中的’oon’，因为’oon’是这个字符串的结束部分。这样他没有被一个“字”字符紧跟着。/\w\b\w/将不能匹配任何字符串，因为在一个单词中间的字符永远也不可能同时满足没有“字”字符跟随和有“字”字符跟随两种情况。</td>
+</tr>
+<tr>
+<td align="left">\B</td>
+<td align="left">匹配一个非单词边界。1、字符串第一个字符为非’字’字符；2、字符串最后一个字符为非’字’字符；3、两个单词字符之间；4、两个非单词字符之间；5、空字符串</td>
+</tr>
+<tr>
+<td align="left">\cX</td>
+<td align="left">当X是处于A到Z之间的字符的时候，匹配字符串中的一个控制符</td>
+</tr>
+<tr>
+<td align="left">\d</td>
+<td align="left">匹配一个数字，等价于[0-9]</td>
+</tr>
+<tr>
+<td align="left">\D</td>
+<td align="left">匹配一个非数字字符，等价于[^0-9]</td>
+</tr>
+<tr>
+<td align="left">\f</td>
+<td align="left">匹配一个换页符</td>
+</tr>
+<tr>
+<td align="left">\n</td>
+<td align="left">匹配一个换行符</td>
+</tr>
+<tr>
+<td align="left">\r</td>
+<td align="left">匹配一个回车符</td>
+</tr>
+<tr>
+<td align="left">\s</td>
+<td align="left">匹配一个空白字符，包括空格、制表符、换页符和换行符。等价于[ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</td>
+</tr>
+<tr>
+<td align="left">\S</td>
+<td align="left">匹配一个非空白字符，等价于[^ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</td>
+</tr>
+<tr>
+<td align="left">\t</td>
+<td align="left">匹配一个水平制表符 (U+0009)。</td>
+</tr>
+<tr>
+<td align="left">\v</td>
+<td align="left">匹配一个垂直制表符 (U+000B)。</td>
+</tr>
+<tr>
+<td align="left">\w</td>
+<td align="left">匹配一个单字字符，(字符、数字或者下划线)。等价于[a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td align="left">\W</td>
+<td align="left">匹配一个非单词字符，[^a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td align="left">\n</td>
+<td align="left">在正则表达式中，它返货最后的第n个捕获匹配的子字符串(捕获的数目以左括号计数)</td>
+</tr>
+<tr>
+<td align="left"><a id="more"></a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">## 使用插入语</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&gt; 任何正则表达式的插入语都会使这部分匹配的副字符串被被记忆，一旦被记忆，这个副字符串就可以被调用于其他用途</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">- 比如， /Chapter (\d+).\d*/ 解释了额外转义的和特殊的字符，并说明了这部分pattern应该被记忆。它精确地匹配后面跟着一个以上数字字符的字符 ‘Chapter ‘ (\d 意为任何数字字符，+ 意为1次以上)，跟着一个小数点（在这个字符中本身也是一个特殊字符；小数点前的 \ 意味着这个pattern必须寻找字面字符 ‘.’)，跟着任何数字字符0次以上。 (\d 意为数字字符， * 意为0次以上)。另外，插入语也用来记忆第一个匹配的数字字符。</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h2 id="使用括号的子字符串匹配"><a href="#使用括号的子字符串匹配" class="headerlink" title="使用括号的子字符串匹配"></a>使用括号的子字符串匹配</h2><blockquote>
+<p>一个正则表达式模式使用括号，将导致相应的子匹配被记住。例如，/a(b)c/，可以匹配字符串’abc’,并且记得’b’。回调这些括号中匹配的子串，使用数组元素[1]……[n]</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="regexp">/\(\w+)\s(\w+)/</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'Small Joke'</span>;</span><br><span class="line"><span class="keyword">var</span> newstr = str.replace(re,<span class="string">'$2,$1'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(newstr) <span class="comment">//Joke Small</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="使用正则表达式"><a href="#使用正则表达式" class="headerlink" title="使用正则表达式"></a>使用正则表达式</h1><blockquote>
+<p>正则表达式可以被用于RegExp的exec和test方法以及String的math、replace、search、split方法。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">exec</td>
+<td align="left">一个在字符串中执行查找匹配的RegExp方法，它返回一个数组(未匹配到则返回null))</td>
+</tr>
+<tr>
+<td align="left">test</td>
+<td align="left">一个在字符串中测试是否匹配的RegExp方法，它返回true或false。</td>
+</tr>
+<tr>
+<td align="left">match</td>
+<td align="left">一个在字符串中会自行查找匹配的String方法，它返回一个数组，在未匹配到时会返回null；</td>
+</tr>
+<tr>
+<td align="left">matchAll</td>
+<td align="left">一个在字符串中执行查找所有匹配的string，它返回一个迭代器(iterator)</td>
+</tr>
+<tr>
+<td align="left">search</td>
+<td align="left">一个在字符串中测试匹配的的String方法，它返回匹配到的位置索引，或者在失败时返回-1</td>
+</tr>
+<tr>
+<td align="left">replace</td>
+<td align="left">一个在字符串中执行查找匹配的String,并且使用替换字符串替换掉匹配到的子字符串</td>
+</tr>
+<tr>
+<td align="left">split</td>
+<td align="left">一个使用正则表达式或者一个固定字符串分割一个字符串，并将分割后的子字符串存储到数组到数组中的String方法</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>当想要知道在一个字符串中的一个匹配是否被找到,可以使用test或search方法,想得到更多信息(但是比较慢)则可以使用exec或match方法,如果使用exex或match方法并且匹配成功了,那么这些方法将返回一个数组并且更新相关的正则表达式对象的属性和预定义的正则表达式对象,如果匹配失败,exec方法返回null;</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myRe = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'d(b+)d'</span>,<span class="string">'g'</span>);</span><br><span class="line"><span class="keyword">var</span> myArray = myRe.exec(<span class="string">'cdbbdbsbz'</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>正则表达式执行后的返回信息</li>
+<li><table>
+<thead>
+<tr>
+<th align="left">对象</th>
+<th align="left">属性或索引</th>
+<th align="left">描述</th>
+<th align="left">在例子中对应的值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">myArray</td>
+<td align="left">无</td>
+<td align="left">匹配到的字符串和所有被记住的子字符串</td>
+<td align="left">[‘dbbd’,’bb’]</td>
+</tr>
+<tr>
+<td align="left">myArray</td>
+<td align="left">index</td>
+<td align="left">在输入的字符串中匹配到以0开始的索引值.</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">myArray</td>
+<td align="left">input</td>
+<td align="left">初始字符串</td>
+<td align="left">‘cdbbdbsbz’</td>
+</tr>
+<tr>
+<td align="left">myArray</td>
+<td align="left">[0]</td>
+<td align="left">匹配到的所有字符串(并不是匹配后记住的字符串)</td>
+<td align="left">‘dbbd’</td>
+</tr>
+<tr>
+<td align="left">maRe</td>
+<td align="left">laseIndex</td>
+<td align="left">下一个匹配的索引值.这个属性只有在使用g参数时可用</td>
+<td align="left">5</td>
+</tr>
+<tr>
+<td align="left">maRe</td>
+<td align="left">source</td>
+<td align="left">模式文本,在正则表达式创建时更新,不执行</td>
+<td align="left">‘d(b+)d’</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="通过标志进行高级搜索"><a href="#通过标志进行高级搜索" class="headerlink" title="通过标志进行高级搜索"></a>通过标志进行高级搜索</h2><blockquote>
+<p>正则表达式有四个可选参数进行全局和不分大小写搜索,这些参数既可以单独使用也可以一起使用在任何顺序和半酣正则表达式的部分中</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">标志</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">g</td>
+<td align="left">全局搜索</td>
+</tr>
+<tr>
+<td align="left">i</td>
+<td align="left">不区分大小写搜索</td>
+</tr>
+<tr>
+<td align="left">m</td>
+<td align="left">多行搜索</td>
+</tr>
+<tr>
+<td align="left">s</td>
+<td align="left">允许.匹配换行符</td>
+</tr>
+<tr>
+<td align="left">u</td>
+<td align="left">使用unicode码的模式进行匹配</td>
+</tr>
+<tr>
+<td align="left">y</td>
+<td align="left">执行’粘性’搜索,匹配从目标字符串的当前位置开始,可以使用y标志</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/05/正则表达式/" data-id="ck1lpqa9y000nm8vmizbj9vsz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/06/ES6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ES6
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/03/事件/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">事件</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/26/JQuery/">JQuery</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/24/Class/">class</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/16/SQL语句/">SQL语句</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/15/PHP操作数据库/">PHP操作数据库</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

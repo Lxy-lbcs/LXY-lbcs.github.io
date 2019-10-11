@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>笔记总结 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="十、选择器（基本，层级，伪类，伪元素，属性）一）基本选择器通配选择符，元素选择符，id选择符，类选择符，包含选择符，群组选择符 二）层级选择符 1、后代选择器（E  F）              包含选择器 2、子代选择器（E &amp;gt; F）           其中E为父元素，F为子元素，一定是父子关系        IE7+ 3、相邻选择器（E+F）             E和F是兄弟是同">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记总结">
+<meta property="og:url" content="http://yoursite.com/2019/08/15/笔记总结-1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="十、选择器（基本，层级，伪类，伪元素，属性）一）基本选择器通配选择符，元素选择符，id选择符，类选择符，包含选择符，群组选择符 二）层级选择符 1、后代选择器（E  F）              包含选择器 2、子代选择器（E &amp;gt; F）           其中E为父元素，F为子元素，一定是父子关系        IE7+ 3、相邻选择器（E+F）             E和F是兄弟是同">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-09T00:29:16.164Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="笔记总结">
+<meta name="twitter:description" content="十、选择器（基本，层级，伪类，伪元素，属性）一）基本选择器通配选择符，元素选择符，id选择符，类选择符，包含选择符，群组选择符 二）层级选择符 1、后代选择器（E  F）              包含选择器 2、子代选择器（E &amp;gt; F）           其中E为父元素，F为子元素，一定是父子关系        IE7+ 3、相邻选择器（E+F）             E和F是兄弟是同">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-笔记总结-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/15/笔记总结-1/" class="article-date">
+  <time datetime="2019-08-15T12:48:31.000Z" itemprop="datePublished">2019-08-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      笔记总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="十、选择器（基本，层级，伪类，伪元素，属性）"><a href="#十、选择器（基本，层级，伪类，伪元素，属性）" class="headerlink" title="十、选择器（基本，层级，伪类，伪元素，属性）"></a>十、选择器（基本，层级，伪类，伪元素，属性）</h1><h2 id="一）基本选择器"><a href="#一）基本选择器" class="headerlink" title="一）基本选择器"></a>一）基本选择器</h2><p>通配选择符，元素选择符，id选择符，类选择符，包含选择符，群组选择符</p>
+<h2 id="二）层级选择符"><a href="#二）层级选择符" class="headerlink" title="二）层级选择符"></a>二）层级选择符</h2><ul>
+<li>1、后代选择器（E  F）              包含选择器</li>
+<li>2、子代选择器（E &gt; F）           其中E为父元素，F为子元素，一定是父子关系        IE7+</li>
+<li>3、相邻选择器（E+F）             E和F是兄弟是同辈，F在E的后面，并且相邻       IE7+</li>
+<li>4、通用选择器（E~F）             E元素后面的所有兄弟F      IE7+</li>
+</ul>
+<h2 id="三）伪类选择符"><a href="#三）伪类选择符" class="headerlink" title="三）伪类选择符"></a>三）伪类选择符</h2><a id="more"></a>
+<ul>
+<li><p>1、动态伪类<br> E:link       当前状态<br> E:visited  访问过<br> E:focus   获取焦点（按tab键可获取焦点） IE8+<br> E:hover   鼠标移上<br> E:active   鼠标按下   IE8+</p>
+</li>
+<li><p>2、目标伪类<br> E:target  IE9+<br> 目标伪类选择器是动态伪类，只有存在URL指向该匹配元素时，样式效果才会生效。</p>
+</li>
+</ul>
+<ul>
+<li><p>3、语言伪类</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line">:lang(en)</span><br><span class="line">   &#123;</span><br><span class="line">   quotes: "~" "~" </span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>文字<span class="tag">&lt;<span class="name">q</span> <span class="attr">lang</span>=<span class="string">“en</span>"&gt;</span>段落中的引用的文字<span class="tag">&lt;/<span class="name">q</span>&gt;</span>文字<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>4、UI元素状态伪类   IE9+ </p>
+<p>E:enabled       启用<br> 除了禁用的就是启用的<br>E:disabled      禁用    </p>
+ <figure class="highlight plain"><figcaption><span>type</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">   E:read-only     只读    </span><br><span class="line">	```&lt;input type=&quot;text&quot; readonly&gt;``` 只读表单  </span><br><span class="line">   E:read-write    非只读    </span><br><span class="line">	除了只读的就是非只读的   </span><br><span class="line">   E:checked       选中    </span><br><span class="line">	```&lt;input type=&quot;checkbox&quot; checked&gt;``` 选中表单   </span><br><span class="line">	复选框不能改变背景色，可以改变外轮廓  </span><br><span class="line">	outline:2px solid #ccc;     </span><br><span class="line"></span><br><span class="line">+ 5、结构伪类      IE9+ </span><br><span class="line"></span><br><span class="line">   &lt;font color=&quot;#f60&quot;&gt; E:first-child    &lt;/font&gt;  作为父元素的第一个子元素的元素E  </span><br><span class="line">   &lt;font color=&quot;#f60&quot;&gt;E:last-child  &lt;/font&gt;   作为父元素的最后一个子元素的元素E  </span><br><span class="line">   &lt;font color=&quot;#f60&quot;&gt;E   F:nth-child(n) &lt;/font&gt;   选择父元素E的第n个子元素F    </span><br><span class="line">   &lt;font color=&quot;#f60&quot;&gt;E   F:nth-last-child(n) &lt;/font&gt;   选择元素E的倒数第n个元素F  </span><br><span class="line">   &lt;font color=&quot;#f60&quot;&gt;E:only-child   &lt;/font&gt;  选择父元素内只包含一个子元素，且匹配为E元素  </span><br><span class="line">   &lt;font color=&quot;#f60&quot;&gt;E:first-of-type   &lt;/font&gt;  选择父元素内具有指定类型的第1个E元素  </span><br><span class="line">   &lt;font color=&quot;#f60&quot;&gt;E:last-of-type   &lt;/font&gt;  选择父元素内具有指定类型的最后一个E元素  </span><br><span class="line">   &lt;font color=&quot;#f60&quot;&gt;E:nth-of-type(n)  &lt;/font&gt;  选择父元素内具有指定类型的第n个E元素  </span><br><span class="line">   &lt;font color=&quot;#f60&quot;&gt;E:nth-last-of-type(n)  &lt;/font&gt; 选择父元素内具有指定类型的倒数第n个E元素  </span><br><span class="line">   &lt;font color=&quot;#f60&quot;&gt;E:only-of-type   &lt;/font&gt;   选择父元素只包含一个同类型的子元素，且匹配为E元素  </span><br><span class="line">   &lt;font color=&quot;#f60&quot;&gt;E:empty &lt;/font&gt;   选择没有子元素的元素，而且该元素也不包含任何文本节点  </span><br><span class="line">   &lt;font color=&quot;#f60&quot;&gt;E:root &lt;/font&gt;    选择匹配元素E所在文档的根元素（多只html）  </span><br><span class="line">    注：  </span><br><span class="line"> &lt;font color=&quot;#f60&quot;&gt;img:nth-of-type(odd) &lt;/font&gt;  所有有图片里面第奇数个图片  </span><br><span class="line"> &lt;font color=&quot;#f60&quot;&gt;img:nth-of-type(even) &lt;/font&gt; 所有有图片里面第偶数个图片</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">+ 6、否定伪类  IE9+ </span><br><span class="line"></span><br><span class="line">   E:not(F)    匹配所有除元素F外的E元素，不写E就是除F外的所有元素</span><br><span class="line"></span><br><span class="line">   栗如：</span><br><span class="line">   ：not(footer)&#123;   &#125;    页面中除了footer外的所有元素</span><br><span class="line">   input：not([type=submit])&#123;    &#125;   除submit按钮外的所有input标签</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 四）伪元素</span><br><span class="line"></span><br><span class="line">   伪元素其实在css中一直存在，大家平时看到的有“:first-line”“:first-letter”“:before”“:after”，css3中对伪元素做了一定的调整，在以前的基础上加了一个冒号，为了区别伪类。</span><br><span class="line"></span><br><span class="line">   ::first-letter</span><br><span class="line">   ::first-line</span><br><span class="line">   ::before</span><br><span class="line">   ::after</span><br><span class="line">   ::selection   仅接受两个属性，一个background，一个color</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 五）圆角边框</span><br><span class="line"></span><br><span class="line">+ border-radius  </span><br><span class="line">  + border-radius：20px;      四个角的圆角是一样的  </span><br><span class="line">  + border-radius：20px 30px;      </span><br><span class="line">    +  top-left和bottom-right相等并取第一个值；  </span><br><span class="line">    + top-right和bottom-left相等并取第二个值；</span><br><span class="line">  +   border-radius：20px 30px 40px;  </span><br><span class="line">      + 第一个值取top-left，</span><br><span class="line">       + 第二个值top-right和bottom-left，</span><br><span class="line">       +    第三个值bottom-right						</span><br><span class="line">   + border-radius：20px 20px 30px 40px;  </span><br><span class="line">      + 第一个值取top-left，</span><br><span class="line">      +    第二个值top-right，</span><br><span class="line">       +   第三个值bottom-right，</span><br><span class="line">      +    第四个值bottom-left ;</span><br><span class="line"></span><br><span class="line"># 十一、媒体查询</span><br><span class="line"></span><br><span class="line">许多智能手机都使用了一个比实际屏幕尺寸大很多的虚拟可视区域，主要目的就是让页面在智能手机端阅读时不会因为实际可视区域变形。所以你看到的页面还是普通样式，即一个全局缩小后的页面。为了让智能手机能根据媒体查询匹配对应样式，让页面在智能手机中正常显示，特意添加了一个meta标签。这个标签的主要作用就是让智能手机浏览页面时能进行优化，并且可以自定义界面可视区域的尺寸和缩放级别。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 1、如何识别手机尺寸通过设置meta语句：</span><br><span class="line">```html</span><br><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">属性值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">width</td>
+<td align="center">可视区域的宽度；</td>
+</tr>
+<tr>
+<td align="center">height</td>
+<td align="center">可视区域的高度；</td>
+</tr>
+<tr>
+<td align="center">device-width</td>
+<td align="center">设备屏幕分辨率的宽度值</td>
+</tr>
+<tr>
+<td align="center">initial-scale</td>
+<td align="center">页面首次被显示时的缩放级别（0-10.0），取值为1时页面按实际尺寸显示，无任何缩</td>
+</tr>
+<tr>
+<td align="center">minimum-scale</td>
+<td align="center">设定最小缩小比栗（0-10.0），取值为1时将禁止用户缩小至实际尺寸之下</td>
+</tr>
+<tr>
+<td align="center">maximum-scale</td>
+<td align="center">设定最大放大比栗（0-10.0），取值为1时将禁止用户放大至实际尺寸之上</td>
+</tr>
+<tr>
+<td align="center">user-scalable</td>
+<td align="center">设定用户是否可以缩放（yes/no）</td>
+</tr>
+</tbody></table>
+<p>可以写成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、媒体类型引用方法："><a href="#2、媒体类型引用方法：" class="headerlink" title="2、媒体类型引用方法："></a>2、媒体类型引用方法：</h2><h3 id="1、link方式"><a href="#1、link方式" class="headerlink" title="1、link方式"></a>1、link方式</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"css/wide.css"</span> <span class="attr">media</span>=<span class="string">"screen and (min-width:641px)"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"css/mobile.css"</span> <span class="attr">media</span>=<span class="string">"screen and (min-width:320px) and (max-width:640px)"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、-import方式"><a href="#2、-import方式" class="headerlink" title="2、@import方式"></a>2、@import方式</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">@import url(style.css) screen and (min-width:641px);</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">@import url(style.css) print   /*print:打印预览视图*/</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、-media方式"><a href="#3、-media方式" class="headerlink" title="3、@media方式"></a>3、@media方式</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1）在样式文件中引用媒体类型：</span><br><span class="line"></span><br><span class="line">@media all and (min-width:600px) and (max-width:800px) &#123;</span><br><span class="line">	h1 &#123;</span><br><span class="line">		background: red;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2）写在内部样式中</span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span>	</span><br><span class="line">	@media only screen and (min-width:600px) and (max-width:800px) &#123;</span><br><span class="line">		h1 &#123;</span><br><span class="line">			background: red;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="十二、多列布局"><a href="#十二、多列布局" class="headerlink" title="十二、多列布局"></a>十二、多列布局</h1><p>css3多列布局可以自动将内容按指定的列数排列，这种特性实现的效果和报纸、杂志类排版非常相似。</p>
+<p>核心属性：</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">属性值介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">columns：</td>
+<td align="center">column-width 列宽   column-count 列数</td>
+</tr>
+<tr>
+<td align="center">column-width：</td>
+<td align="center">定义每列列宽； 类似于最小宽度min-width； auto 自适应；</td>
+</tr>
+<tr>
+<td align="center">column-count：</td>
+<td align="center">定义分列列数；auto自适应（由列宽、容器宽和列间距决定），也可固定</td>
+</tr>
+<tr>
+<td align="center">column-gap：</td>
+<td align="center">定义列间距； 不能为负数；</td>
+</tr>
+<tr>
+<td align="center">column-rule：</td>
+<td align="center">定义列边框；与定义边框一样：2px dashed #ccc;</td>
+</tr>
+<tr>
+<td align="center">column-span：</td>
+<td align="center">定义多列布局中子元素的跨列效果；通常用于标题；1/none：不跨列；all：跨所有列</td>
+</tr>
+<tr>
+<td align="center">column-fill:</td>
+<td align="center">盒子设置了高度才会有效果 auto      前面的列高度都到达最低端，在排列后面的列  balance 每列的高度平均分，不一定到达最低端</td>
+</tr>
+<tr>
+<td align="center">break-inside: avoid;</td>
+<td align="center">避免在元素内部断行并产生新列        放在列里面的元素身上</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/15/笔记总结-1/" data-id="ck1lpqaa3000sm8vm667aattb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/16/2019-8-16/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          开心的一天
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/15/笔记总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">笔记总结</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/26/JQuery/">JQuery</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/24/Class/">class</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/16/SQL语句/">SQL语句</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/15/PHP操作数据库/">PHP操作数据库</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

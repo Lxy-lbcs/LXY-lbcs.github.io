@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>js动画 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="元素运动的本质：每间隔一个小的时间，改变元素的属性一次，间隔时间短，看起来就是连续的。(最好保证60帧)  根据所传的属性名和对应的目标位置，来实现过渡  123456789101112131415161718192021222324252627282930313233343536&amp;lt;style&amp;gt;    div&amp;#123;        width:50px;        height">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js动画">
+<meta property="og:url" content="http://yoursite.com/2019/09/10/js动画/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="元素运动的本质：每间隔一个小的时间，改变元素的属性一次，间隔时间短，看起来就是连续的。(最好保证60帧)  根据所传的属性名和对应的目标位置，来实现过渡  123456789101112131415161718192021222324252627282930313233343536&amp;lt;style&amp;gt;    div&amp;#123;        width:50px;        height">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-15T10:46:26.124Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js动画">
+<meta name="twitter:description" content="元素运动的本质：每间隔一个小的时间，改变元素的属性一次，间隔时间短，看起来就是连续的。(最好保证60帧)  根据所传的属性名和对应的目标位置，来实现过渡  123456789101112131415161718192021222324252627282930313233343536&amp;lt;style&amp;gt;    div&amp;#123;        width:50px;        height">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-js动画" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/10/js动画/" class="article-date">
+  <time datetime="2019-09-09T23:19:31.000Z" itemprop="datePublished">2019-09-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js动画
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>元素运动的本质：每间隔一个小的时间，改变元素的属性一次，间隔时间短，看起来就是连续的。(最好保证60帧)</strong></p>
+<blockquote>
+<p>根据所传的属性名和对应的目标位置，来实现过渡</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    div&#123;</span><br><span class="line">        width:50px;</span><br><span class="line">        height:50px;</span><br><span class="line">        background:red;</span><br><span class="line">        position:absolute;</span><br><span class="line">        left:1500px;</span><br><span class="line">        top:100px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">let</span> div = <span class="built_in">document</span>.querySelector(<span class="string">'div'</span>);</span></span><br><span class="line"><span class="javascript">            <span class="function"><span class="keyword">function</span> <span class="title">move</span>(<span class="params">options</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="comment">//  遍历对象的所有属性，来得知要改变那些属性，以及这些属性对应的目标位置</span></span></span><br><span class="line"><span class="javascript">                id = setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">for</span>(<span class="keyword">let</span> shuXingMing <span class="keyword">in</span> options)&#123;</span></span><br><span class="line"><span class="javascript">                        <span class="keyword">let</span> current = <span class="built_in">window</span>.getComputedStyle(div,<span class="literal">null</span>).getPropertyValue([shuXingMing]);</span></span><br><span class="line"><span class="javascript">                        current = <span class="built_in">parseInt</span>(current);</span></span><br><span class="line"><span class="javascript">                        <span class="keyword">let</span> target = options[shuXingMing]</span></span><br><span class="line"><span class="javascript">                        <span class="keyword">let</span> speed = (target - current) / <span class="number">25</span></span></span><br><span class="line"><span class="javascript">                        speed = speed &gt; <span class="number">0</span> ? <span class="built_in">Math</span>.ceil(speed) : <span class="built_in">Math</span>.floor(speed)</span></span><br><span class="line"><span class="javascript">                        <span class="keyword">if</span>(speed === <span class="number">0</span>)&#123;</span></span><br><span class="line">                            clearInterval(id)</span><br><span class="line">                        &#125;</span><br><span class="line"><span class="javascript">                        div.style[shuXingMing] = current + speed + <span class="string">'px'</span></span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,16)</span><br><span class="line">            &#125;</span><br><span class="line">            move(&#123;</span><br><span class="line">                left:300,</span><br><span class="line">                top:100</span><br><span class="line">            &#125;)</span><br><span class="line">        <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h2 id="window-getComputedStyle"><a href="#window-getComputedStyle" class="headerlink" title="window.getComputedStyle()"></a>window.getComputedStyle()</h2><p>该方法返回一个对象，该对象再应用活动样式并解析这些值可能包括的任何基本计算后报告元素的所有CSS属性的值。私有的CSS属性值可以通过对象提供的API或通过简单的使用CSS属性名称进行索引来访问。</p>
+<p>语法：let style = window.getComputedStyle(element,[pseudoElt])</p>
+<ul>
+<li>element ： 用于获取计算机样式的element</li>
+<li>pseudoElt(可选) ： 指定一个要匹配的伪元素的字符串，必须对普通元素省略(或null)</li>
+</ul>
+<p><em>window.getComputedStyle返回的对象是只读的</em></p>
+<p>getComputedStyle可以从为伪元素拉取样式信息，栗如：::after 、::before 、::marker 、 ::line-marker 一起查看</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">h3::after &#123;</span><br><span class="line">    content: "I joker!";</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>generated content<span class="tag">&lt;/<span class="name">h3</span>&gt;</span> </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> h3 = <span class="built_in">document</span>.querySelector(<span class="string">'h3'</span>), </span></span><br><span class="line"><span class="javascript">    result = getComputedStyle(h3,<span class="string">'::after'</span>).content;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(result) <span class="comment">//  I joker!</span></span></span><br><span class="line">     </span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="CSSStyleDeclaration-getPropertyValue"><a href="#CSSStyleDeclaration-getPropertyValue" class="headerlink" title="CSSStyleDeclaration.getPropertyValue()"></a>CSSStyleDeclaration.getPropertyValue()</h2><p>此接口会返回以恶个DOMString，这个返回值将会包含预请求的CSS属性样式</p>
+<p>语法：let value = style.getPropertyValue(property)</p>
+<ul>
+<li>property ： 应是一个CSSString，为所需要查询的CSS属性名称</li>
+<li>返回值：value是DOMString，包含有欲查找的CSS属性的值，若原CSSStyyeDeclaration没有设置对应属性，则返回空字符串</li>
+</ul>
+<blockquote>
+<p>栗：</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> current = <span class="built_in">window</span>.getComputedStyle(div,<span class="literal">null</span>).getPropertyValue(top);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/10/js动画/" data-id="ck1lpqa9f000am8vmkc95fsuq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/10/面向对象/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          面向对象
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/09/瀑布流/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">瀑布流</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/26/JQuery/">JQuery</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/24/Class/">class</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/16/SQL语句/">SQL语句</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/15/PHP操作数据库/">PHP操作数据库</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

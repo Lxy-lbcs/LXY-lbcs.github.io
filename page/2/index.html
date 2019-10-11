@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/05/正则表达式/" class="article-date">
+  <time datetime="2019-09-05T08:48:31.000Z" itemprop="datePublished">2019-09-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/05/正则表达式/">正则表达式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="正则表达式中的特殊字符"><a href="#正则表达式中的特殊字符" class="headerlink" title="正则表达式中的特殊字符"></a>正则表达式中的特殊字符</h2><table>
+<thead>
+<tr>
+<th align="left">字符</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">\</td>
+<td align="left">1、在非特殊字符之前的反斜杠表示下一个字符是特殊字符，不能按照字面量理解。无论字符出现在哪里，如果前面加了’&#39;，将不再匹配任何字符，而是表示一个字符边界。  2、在特殊字符之前的反斜杠表示下一个字符不是特殊字符，应该按照字面理解。3、在字符串字面量中，反斜杠是反义字符。</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">匹配输入的开始，如果多行标志被设置为true，也匹配换行符后紧跟的位置</td>
+</tr>
+<tr>
+<td align="left">$</td>
+<td align="left">匹配输入的结束，如果多行标志被设置为true，也匹配换行符前的位置</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">匹配前一个表达式0次或多次，等价于{0，}</td>
+</tr>
+<tr>
+<td align="left">+</td>
+<td align="left">匹配前一个表达式1次或多次，等价于{1，}</td>
+</tr>
+<tr>
+<td align="left">？</td>
+<td align="left">匹配前一个表达式0次或1次，等价于{0，1}，还用于先行断言中，如x(?=y)和x(?!y)</td>
+</tr>
+<tr>
+<td align="left">.</td>
+<td align="left">(小数点)默认匹配除换行符之外的任何单个字符</td>
+</tr>
+<tr>
+<td align="left">(x)</td>
+<td align="left">匹配’x’并记住匹配项，括号被称之为捕获括号</td>
+</tr>
+<tr>
+<td align="left">(?:x)</td>
+<td align="left">匹配’x’但是不记住匹配项。这种括号叫做非捕获括号，是的能够定义与正则表达式运算符一起使用的子表达式。例如：/foo{1,2}/,{1,2}只应用于’foo’的最后一个字符’o’;/(?:foo){1,2}/，{1,2}会应用于整个’foo’单词</td>
+</tr>
+<tr>
+<td align="left">x(?=y)</td>
+<td align="left">匹配’x’仅仅当’x’后跟着’y’，这种叫做先行断言</td>
+</tr>
+<tr>
+<td align="left">(?&lt;=y)x</td>
+<td align="left">匹配’x’仅仅当’x’前面是’y’，这种叫做后行断言</td>
+</tr>
+<tr>
+<td align="left">x(?!y)</td>
+<td align="left">仅仅当’x’后面不跟着’y’时匹配’x’，这被称之为正向否定查找。例如：/\d+(?!.)/.exec(‘3.141’)匹配’141’而不是u’3.141’</td>
+</tr>
+<tr>
+<td align="left">(?&lt;!y)x</td>
+<td align="left">仅仅当’x’前面不是’y’时撇皮’x’，这杯称之为反向否定查找</td>
+</tr>
+<tr>
+<td align="left">x</td>
+<td align="left">y</td>
+</tr>
+<tr>
+<td align="left">{n}</td>
+<td align="left">n是一个正整数，匹配了前面一个字符刚好出现了n次</td>
+</tr>
+<tr>
+<td align="left">{n,}</td>
+<td align="left">n是一个正整数，匹配前一个字符至少出现了n次</td>
+</tr>
+<tr>
+<td align="left">{n,m}</td>
+<td align="left">n和m都是整数，匹配前面的字符至少n次，最多m次。如果n或者m的值是0，这个值被忽略</td>
+</tr>
+<tr>
+<td align="left">[xyz]</td>
+<td align="left">一个字符集合，匹配方括号中的任意字符，包括转义序列。你可以使用破折号(-)来指定一个字符范围，</td>
+</tr>
+<tr>
+<td align="left">[^xyz]</td>
+<td align="left">一个反向字符集，匹配任何没有包含方括号中的字符，</td>
+</tr>
+<tr>
+<td align="left">[^\b]</td>
+<td align="left">匹配一个退格(U+0008)</td>
+</tr>
+<tr>
+<td align="left">\b</td>
+<td align="left">匹配一个词的开始或结束，使用”moon”举例：/\bm/匹配“moon”中的‘m’；/oo\b/并不匹配”moon”中的’oo’，因为’oo’被一个“字”字符’n’紧跟着。/oon\b/匹配”moon”中的’oon’，因为’oon’是这个字符串的结束部分。这样他没有被一个“字”字符紧跟着。/\w\b\w/将不能匹配任何字符串，因为在一个单词中间的字符永远也不可能同时满足没有“字”字符跟随和有“字”字符跟随两种情况。</td>
+</tr>
+<tr>
+<td align="left">\B</td>
+<td align="left">匹配一个非单词边界。1、字符串第一个字符为非’字’字符；2、字符串最后一个字符为非’字’字符；3、两个单词字符之间；4、两个非单词字符之间；5、空字符串</td>
+</tr>
+<tr>
+<td align="left">\cX</td>
+<td align="left">当X是处于A到Z之间的字符的时候，匹配字符串中的一个控制符</td>
+</tr>
+<tr>
+<td align="left">\d</td>
+<td align="left">匹配一个数字，等价于[0-9]</td>
+</tr>
+<tr>
+<td align="left">\D</td>
+<td align="left">匹配一个非数字字符，等价于[^0-9]</td>
+</tr>
+<tr>
+<td align="left">\f</td>
+<td align="left">匹配一个换页符</td>
+</tr>
+<tr>
+<td align="left">\n</td>
+<td align="left">匹配一个换行符</td>
+</tr>
+<tr>
+<td align="left">\r</td>
+<td align="left">匹配一个回车符</td>
+</tr>
+<tr>
+<td align="left">\s</td>
+<td align="left">匹配一个空白字符，包括空格、制表符、换页符和换行符。等价于[ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</td>
+</tr>
+<tr>
+<td align="left">\S</td>
+<td align="left">匹配一个非空白字符，等价于[^ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</td>
+</tr>
+<tr>
+<td align="left">\t</td>
+<td align="left">匹配一个水平制表符 (U+0009)。</td>
+</tr>
+<tr>
+<td align="left">\v</td>
+<td align="left">匹配一个垂直制表符 (U+000B)。</td>
+</tr>
+<tr>
+<td align="left">\w</td>
+<td align="left">匹配一个单字字符，(字符、数字或者下划线)。等价于[a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td align="left">\W</td>
+<td align="left">匹配一个非单词字符，[^a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td align="left">\n</td>
+<td align="left">在正则表达式中，它返货最后的第n个捕获匹配的子字符串(捕获的数目以左括号计数)</td>
+</tr>
+<tr>
+<td align="left">
+        
+          <p class="article-more-link">
+            <a href="/2019/09/05/正则表达式/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/05/正则表达式/" data-id="ck1lpqa9y000nm8vmizbj9vsz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-事件" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/03/事件/" class="article-date">
+  <time datetime="2019-09-03T07:36:39.000Z" itemprop="datePublished">2019-09-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/03/事件/">事件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p>1、事件捕获：事件发生后，由外向内传递<br>2、事件冒泡：事件发生后，由内向外传递<br>3、DOM事件流：先从外向内，再从内向外</p>
+<p>例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">        &lt;button&gt;点我&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>p&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>当button被点击时，事件流：<br>捕获阶段：window -&gt; document -&gt; hetl -&gt; body -&gt; div -&gt; p -&gt; button<br>冒泡阶段：button -&gt; p -&gt; div -&gt; body -&gt; html -&gt; document -&gt; window</p>
+<blockquote>
+<p>当事件发生时候，默认情况下，事件流是一定存在的。例如，当前页面没有点击事件，但是这是点击的button，上面的事件流是存在的。只是事件传递到某个元素时，我们并没有去处理这个事件</p>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2019/09/03/事件/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/03/事件/" data-id="ck1lpqa9j000cm8vmi1iippz5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-练习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/03/练习/" class="article-date">
+  <time datetime="2019-09-03T04:37:26.000Z" itemprop="datePublished">2019-09-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/03/练习/">练习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="点击按钮添加-删除表格"><a href="#点击按钮添加-删除表格" class="headerlink" title="点击按钮添加/删除表格"></a>点击按钮添加/删除表格</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        td &#123;</span><br><span class="line">            width: 100px;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">'1'</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>ID<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>年龄<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"age"</span> <span class="attr">value</span>=<span class="string">"排序"</span> <span class="attr">style</span>=<span class="string">"margin-left:10px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>籍贯<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"area"</span> <span class="attr">value</span>=<span class="string">"排序"</span> <span class="attr">style</span>=<span class="string">"margin-left:10px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>张三丰<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>109<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>山东济南<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>李四疯<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>25<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>河南洛阳<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>3<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>晓明<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>33<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>上海<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>4<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>翠花<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>18<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>辽宁沈阳<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//  监听age点击事件</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.querySelector(<span class="string">'#age'</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="comment">//  因为要给tr排序，所以取到所有tr</span></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> trs = <span class="built_in">document</span>.querySelectorAll(<span class="string">'tbody tr'</span>)</span></span><br><span class="line"><span class="javascript">            <span class="comment">//  因为要排序，需要使用sort方法，所以将trs伪数组转为真数组</span></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> arr = <span class="built_in">Array</span>.from(trs)</span></span><br><span class="line"><span class="javascript">            <span class="comment">//  使用sort方法，根据tr内的td来为tr排序</span></span></span><br><span class="line"><span class="javascript">            arr.sort(<span class="function"><span class="keyword">function</span> (<span class="params">tr1, tr2</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="comment">//  取到对应tr的第三个td的值</span></span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> age1 = tr1.children[<span class="number">2</span>].innerHTML</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> age2 = tr2.children[<span class="number">2</span>].innerHTML</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">                <span class="comment">//  进行判断</span></span></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> age1 - age2</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">                <span class="comment">//  遍历arr</span></span></span><br><span class="line"></span><br><span class="line">            &#125;)</span><br><span class="line"><span class="javascript">            arr.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">tr</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="comment">//  更新DOM树,将排序完成tr重新放入DOM树上</span></span></span><br><span class="line"><span class="javascript">                <span class="built_in">document</span>.querySelector(<span class="string">'tbody'</span>).appendChild(tr)</span></span><br><span class="line">            &#125;)</span><br><span class="line"><span class="javascript">        &#125;, <span class="literal">false</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">        <span class="comment">//  监听area点击事件</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.querySelector(<span class="string">'#area'</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> trs = <span class="built_in">document</span>.querySelectorAll(<span class="string">'tbody tr'</span>)</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> arr = <span class="built_in">Array</span>.from(trs)</span></span><br><span class="line"><span class="javascript">            arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">tr1,tr2</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> city1 = tr1.children[<span class="number">3</span>].innerHTML</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> city2 = tr2.children[<span class="number">3</span>].innerHTML</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> city1.localeCompare(city2)</span></span><br><span class="line">            &#125;)</span><br><span class="line"><span class="javascript">            arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">tr</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">document</span>.querySelector(<span class="string">'tbody'</span>).appendChild(tr)</span></span><br><span class="line">            &#125;)</span><br><span class="line"><span class="javascript">        &#125;, <span class="literal">false</span>)</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://s2.ax1x.com/2019/09/03/nFoJ0J.jpg">
+        
+          <p class="article-more-link">
+            <a href="/2019/09/03/练习/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/03/练习/" data-id="ck1lpqaa5000um8vmvs1dneqr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-点击表格切换图片-js写法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/30/点击表格切换图片-js写法/" class="article-date">
+  <time datetime="2019-08-30T03:45:39.000Z" itemprop="datePublished">2019-08-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/30/点击表格切换图片-js写法/">点击表格切换图片-js写法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        td &#123;</span><br><span class="line">            width: 50px;</span><br><span class="line">            height: 50px;</span><br><span class="line">            background: #fcf;</span><br><span class="line">            cursor: pointer;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        img &#123;</span><br><span class="line">            margin-top: 50px;</span><br><span class="line">            width: 1000px;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .focus &#123;</span><br><span class="line">            background: #dfc;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"focus"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"G:/千锋/Second/00_src/08_dom/img/1.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//取到所有td</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> tds = <span class="built_in">document</span>.querySelectorAll(<span class="string">'td'</span>);</span></span><br><span class="line"><span class="javascript">        <span class="comment">//循环遍历所有td</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; tds.length; i++) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="comment">//记录i值</span></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> td = tds[i];</span></span><br><span class="line"><span class="javascript">            <span class="comment">//循环的过程中，i值是正确的，在循环中将其保存在td上</span></span></span><br><span class="line"><span class="javascript">            <span class="comment">//为td新加属性值</span></span></span><br><span class="line"><span class="javascript">            td.setAttribute(<span class="string">'joker'</span>, <span class="string">'G:/千锋/Second/00_src/08_dom/img/'</span> + (i + <span class="number">1</span>) + <span class="string">'.jpg'</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">            <span class="comment">//td点击事件</span></span></span><br><span class="line"><span class="javascript">            td.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="comment">//循环中有事件绑定，事件绑定中使用了i值，此时的i值是错误的</span></span></span><br><span class="line"><span class="javascript">                <span class="comment">//取到img</span></span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> img = <span class="built_in">document</span>.querySelector(<span class="string">'img'</span>);</span></span><br><span class="line"><span class="javascript">                <span class="comment">//取到为td新增的属性值</span></span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> src = <span class="keyword">this</span>.getAttribute(<span class="string">'joker'</span>);</span></span><br><span class="line"><span class="javascript">                <span class="comment">//将设置的属性值赋值给img的src属性</span></span></span><br><span class="line"><span class="javascript">                img.setAttribute(<span class="string">'src'</span>, src);</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">                <span class="comment">//清除焦点</span></span></span><br><span class="line"><span class="javascript">                <span class="built_in">document</span>.querySelector(<span class="string">'.focus'</span>).className = <span class="string">''</span>;</span></span><br><span class="line"><span class="javascript">                <span class="comment">//设置新焦点</span></span></span><br><span class="line"><span class="javascript">                <span class="keyword">this</span>.className = <span class="string">'focus'</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="comment">// td.removeAttribute('joker');</span></span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/30/点击表格切换图片-js写法/" data-id="ck1lpqaa0000pm8vmdj9stf7i" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-兼容性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/29/兼容性/" class="article-date">
+  <time datetime="2019-08-29T11:16:14.000Z" itemprop="datePublished">2019-08-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/29/兼容性/">跨浏览器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="跨浏览器取得窗口左边和上边的位置"><a href="#跨浏览器取得窗口左边和上边的位置" class="headerlink" title="跨浏览器取得窗口左边和上边的位置"></a>跨浏览器取得窗口左边和上边的位置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> leftPos = (<span class="built_in">window</span>.screenLeft !== <span class="literal">undefined</span>) ? <span class="built_in">window</span>.screenLeft : <span class="built_in">window</span>.screenX;</span><br><span class="line"><span class="keyword">var</span> topPos = (<span class="built_in">window</span>.screenTop !== <span class="literal">undefined</span>) ? <span class="built_in">window</span>.screenTop : <span class="built_in">window</span>.screenY;</span><br></pre></td></tr></table></figure>
+
+<h3 id="跨浏览器取得滚轮滚动距离"><a href="#跨浏览器取得滚轮滚动距离" class="headerlink" title="跨浏览器取得滚轮滚动距离"></a>跨浏览器取得滚轮滚动距离</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scrollTop = <span class="built_in">document</span>.documentElement.scrollTop ? <span class="built_in">document</span>.documentElement.scrollTop : <span class="built_in">document</span>.body.scrollTop;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/29/兼容性/" data-id="ck1lpqa9o000fm8vmrqs6f8i9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-BOM" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/28/BOM/" class="article-date">
+  <time datetime="2019-08-28T05:21:14.000Z" itemprop="datePublished">2019-08-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/28/BOM/">BOM</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h1><blockquote>
+<p>定义：浏览器对象模型，通过这个BOM对象，可以访问浏览器相关内容；<br>BOM的核心对象是：window；</p>
+</blockquote>
+<ul>
+<li>window有两个职责：<ul>
+<li>1、代表着一个窗口</li>
+<li>2、全局对象(所有全局变量，都可以通过这个对象访问到)；所有全局变量/全局函数，都会作为window的属性/方法存在</li>
+</ul>
+</li>
+</ul>
+<h2 id="setTimeout"><a href="#setTimeout" class="headerlink" title="setTimeout()"></a>setTimeout()</h2><blockquote>
+<p>定义:在一段时间之后，做一件事情(只做一次)  </p>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2019/08/28/BOM/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/28/BOM/" data-id="ck1lpqa8n0000m8vmy1chs3cp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-排序算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/28/排序算法/" class="article-date">
+  <time datetime="2019-08-28T02:28:57.000Z" itemprop="datePublished">2019-08-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/28/排序算法/">排序算法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>排序的定义：对一系列对象根据某个关键字进行排序</strong></p>
+<h1 id="冒泡排序-Bubble-Sort"><a href="#冒泡排序-Bubble-Sort" class="headerlink" title="冒泡排序(Bubble Sort)"></a>冒泡排序(Bubble Sort)</h1><h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述:"></a>算法描述:</h2><ul>
+<li>1、比较相邻的元素。如果第一个比第二个大，就交换它们两个；</li>
+<li>2、对每一对相邻的元素做相同的工作，从开始第一队到最后一对，这样在最后的元素应该是最大的数；</li>
+<li>3、针对所有的元素重复以上步骤，除了最后一个</li>
+<li>4、重复步骤1~3，直到排序完成；</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2019/08/28/排序算法/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/28/排序算法/" data-id="ck1lpqa9w000lm8vme5sl8bmv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-钟表" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/27/钟表/" class="article-date">
+  <time datetime="2019-08-27T14:17:20.000Z" itemprop="datePublished">2019-08-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/27/钟表/">钟表</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="写的及其麻烦的一个钟表，只为了把新学到的知识用一下，在顺带复习复习。"><a href="#写的及其麻烦的一个钟表，只为了把新学到的知识用一下，在顺带复习复习。" class="headerlink" title="写的及其麻烦的一个钟表，只为了把新学到的知识用一下，在顺带复习复习。"></a>写的及其麻烦的一个钟表，只为了把新学到的知识用一下，在顺带复习复习。</h2>
+        
+          <p class="article-more-link">
+            <a href="/2019/08/27/钟表/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/27/钟表/" data-id="ck1lpqaa6000vm8vm2ssqc75e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-保佑" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/27/保佑/" class="article-date">
+  <time datetime="2019-08-27T11:07:05.000Z" itemprop="datePublished">2019-08-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/27/保佑/">保佑</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code class="js">                   _ooOoo_
+                  o8888888o
+                  <span class="number">88</span><span class="string">" . "</span><span class="number">88</span>
+                  (| -_- |)
+                  O\  =  <span class="regexp">/O</span>
+<span class="regexp">               ____/</span><span class="string">`---'\____</span>
+<span class="string">             .'  \\|     |//  `</span>.
+            /  \\|||  :  |||<span class="comment">//  \</span>
+           /  _||||| -:- |||||-  \
+           |   | \\\  -  <span class="comment">/// |   |</span>
+           | \_|  <span class="string">''</span>\---<span class="regexp">/''  |   |</span>
+<span class="regexp">           \  .-\__  `-`  ___/</span>-. /
+         ___<span class="string">`. .'  /--.--\  `</span>. . 
+      .<span class="string">""</span> <span class="string">'&lt;  `.___\_&lt;|&gt;_/___.'</span>  &gt;<span class="string">'"".</span>
+<span class="string">     | | :  `- \`.;`\ _ /`;.`/ - ` : | |</span>
+<span class="string">     \  \ `-.   \_ __\ /__ _/   .-` /  /</span>
+<span class="string">======`-.____`-.___\_____/___.-`____.-'</span>======
+                   <span class="string">`=---='</span>
+<span class="string">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+<span class="string"></span>
+<span class="string">      佛祖保佑      永无BUG      永不修改</span>
+<span class="string"></span>
+<span class="string">                   佛曰:</span>
+<span class="string">         写字楼里写字间，写字间里程序员；</span>
+<span class="string"></span>
+<span class="string">         程序人员写程序，又拿程序换酒钱。</span>
+<span class="string"></span>
+<span class="string">         酒醒只在网上坐，酒醉还来网下眠；</span>
+<span class="string"></span>
+<span class="string">         酒醉酒醒日复日，网上网下年复年。</span>
+<span class="string"></span>
+<span class="string">         但愿老死电脑间，不愿鞠躬老板前；</span>
+<span class="string"></span>
+<span class="string">         奔驰宝马贵者趣，公交自行程序员。</span>
+<span class="string"></span>
+<span class="string">         别人笑我忒疯癫，我笑自己命太贱；</span>
+<span class="string"></span>
+<span class="string">         不见满街漂亮妹，哪个归得程序员？</span></code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/27/保佑/" data-id="ck1lpqa9l000dm8vmwkci5tzh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/26/字符串/" class="article-date">
+  <time datetime="2019-08-26T00:49:45.000Z" itemprop="datePublished">2019-08-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/26/字符串/">字符串对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="字符串对象"><a href="#字符串对象" class="headerlink" title="字符串对象"></a>字符串对象</h1><h2 id="字符串的创建"><a href="#字符串的创建" class="headerlink" title="字符串的创建"></a>字符串的创建</h2><p><font size="4px">定义：将基本类型的字符串，包装在一个对象中，便于我i们对字符串进行各种操作</font><br>语法: </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">''</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str);  <span class="comment">//'object'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'hello'</span>;</span><br><span class="line"><span class="keyword">typeof</span> str  <span class="comment">//'string'</span></span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2019/08/26/字符串/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/26/字符串/" data-id="ck1lpqa9u000jm8vmrkbls0v3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/26/JQuery/">JQuery</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/24/Class/">class</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/16/SQL语句/">SQL语句</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/15/PHP操作数据库/">PHP操作数据库</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

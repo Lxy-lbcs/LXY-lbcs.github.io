@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>ES6 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、let命令基本用法 ES6新增了let命令，用来声明变量。它的用法类似于var。但是所声明的变量，只在let命令所在的代码块内有效。  1234567var a = [];for (var i = 0;i&amp;lt;10;i++)&amp;#123;    a&amp;#123;i&amp;#125; = function()&amp;#123;        console.log(i)    &amp;#125;&amp;#125;a[6]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6">
+<meta property="og:url" content="http://yoursite.com/2019/09/06/ES6/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、let命令基本用法 ES6新增了let命令，用来声明变量。它的用法类似于var。但是所声明的变量，只在let命令所在的代码块内有效。  1234567var a = [];for (var i = 0;i&amp;lt;10;i++)&amp;#123;    a&amp;#123;i&amp;#125; = function()&amp;#123;        console.log(i)    &amp;#125;&amp;#125;a[6]">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-15T10:45:26.802Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6">
+<meta name="twitter:description" content="1、let命令基本用法 ES6新增了let命令，用来声明变量。它的用法类似于var。但是所声明的变量，只在let命令所在的代码块内有效。  1234567var a = [];for (var i = 0;i&amp;lt;10;i++)&amp;#123;    a&amp;#123;i&amp;#125; = function()&amp;#123;        console.log(i)    &amp;#125;&amp;#125;a[6]">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ES6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/06/ES6/" class="article-date">
+  <time datetime="2019-09-06T12:37:20.000Z" itemprop="datePublished">2019-09-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ES6
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1、let命令"><a href="#1、let命令" class="headerlink" title="1、let命令"></a>1、let命令</h1><h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><ul>
+<li>ES6新增了let命令，用来声明变量。它的用法类似于var。但是所声明的变量，只在let命令所在的代码块内有效。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    a&#123;i&#125; = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">a[<span class="number">6</span>]();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>上面代码中，变量i是var命令声明的，在全局范围内都有效，所以全局只有一个变量i。每一次循环，变量i的值都会发生改变，而循环内被赋给数组a的函数内部的console.log(i)，里面的i指向的就是全局的i。也就是说，所有数组a的成员里面的i，指向的都是同一个i，导致运行时输出的是最后一轮的i的值，也就是 10。</p>
+<a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>;i++)&#123;</span><br><span class="line">    a&#123;i&#125; = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i)</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line">a[<span class="number">6</span>]()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上面代码中，变量i是let声明的，当前的i只在本轮循环有效，所以每一次循环的i其实都是一个新的变量，所以最后输出的是6。你可能会问，如果每一轮循环的变量i都是重新声明的，那它怎么知道上一轮循环的值，从而计算出本轮循环的值？这是因为 JavaScript 引擎内部会记住上一轮循环的值，初始化本轮的变量i时，就在上一轮循环的基础上进行计算。</p>
+</li>
+</ul>
+<p><strong>另外，for循环还有一个特殊之处，就是设置循环变量的那部分是一个父作用域，而循环内部是一个单独的子作用域。</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;<span class="number">3</span>;i++)&#123;</span><br><span class="line">    <span class="keyword">let</span> i = <span class="string">'abc'</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(i)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 'abc' 'abc' 'abc'</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>函数内部的变量i与循环变量i不在同一个作用域，有各自独自的作用域</li>
+</ul>
+<hr>
+<h2 id="不存在变量提升"><a href="#不存在变量提升" class="headerlink" title="不存在变量提升"></a>不存在变量提升</h2><ul>
+<li>var命令会发生’变量声明’提升，即变量可以在声明之前使用(但是赋值不会)，值为’underfined’.</li>
+<li>let命令改变了语法行为，它所声明的变量一定要在声明后使用，否则报错。</li>
+</ul>
+<hr>
+<h2 id="暂时性死区"><a href="#暂时性死区" class="headerlink" title="暂时性死区"></a>暂时性死区</h2><ul>
+<li>只要块级作用域存在let指令，它所声明的变量就’绑定’(binding)这个区域，不再受外部的影响</li>
+<li>ES6明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错</li>
+<li>总之，在代码框内，使用let命令声明变量之前，该变量都是不可用的，这在语法上，被称之为’暂时性死区’，简称TDZ；</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="comment">// TDZ开始</span></span><br><span class="line">  tmp = <span class="string">'abc'</span>; <span class="comment">// ReferenceError</span></span><br><span class="line">  <span class="built_in">console</span>.log(tmp); <span class="comment">// ReferenceError</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> tmp; <span class="comment">// TDZ结束</span></span><br><span class="line">  <span class="built_in">console</span>.log(tmp); <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line">  tmp = <span class="number">123</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(tmp); <span class="comment">// 123</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>上面代码中，在let命令声明变量tmp之前，都属于变量tmp的“死区”。</p>
+</li>
+<li><p>有些’死区’不容易被发现</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params">x = y, y = <span class="number">2</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> [x, y];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bar(); <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上面代码中，调用bar函数之所以报错（某些实现可能不报错），是因为参数x默认值等于另一个参数y，而此时y还没有声明，属于“死区”。如果y的默认值是x，就不会报错，因为此时x已经声明了。</p>
+</li>
+<li><p>ES6规定暂时性死区和let、const语句不出现变量声明提升，主要是为了减少运行时错误，防止在变量声明前就使用这个变量，从而导致医疗之外的行为。</p>
+</li>
+<li><p>总之，暂时性死区的本质就是，只要已进入当前作用域，所需使用的变量就已经存在了，但是不可获取，只有等到声明变量的那一行代码出现，才可以获取和使用该变量。</p>
+</li>
+</ul>
+<hr>
+<h2 id="不允许重复声明"><a href="#不允许重复声明" class="headerlink" title="不允许重复声明"></a>不允许重复声明</h2><p><strong>let不允许在相同的作用域内，重置声明同一个变量。</strong></p>
+<hr>
+<h1 id="2、块级作用域"><a href="#2、块级作用域" class="headerlink" title="2、块级作用域"></a>2、块级作用域</h1><ul>
+<li><p>ES5只有全局作用域，没有块级作用域。</p>
+<ul>
+<li><p>第一个问题:内层变量可能会覆盖外层变量</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tmp = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(tmp);</span><br><span class="line">    <span class="keyword">if</span> (<span class="literal">false</span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> tmp = <span class="string">'hello world'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">f(); <span class="comment">// undefined </span></span><br><span class="line"><span class="comment">//  上面代码的原意是，if代码块的外部使用外层的tmp变量，内部使用内层的tmp变量。</span></span><br><span class="line"><span class="comment">//但是，函数f执行后，输出结果为undefined，原因在于变量提升，导致内层的tmp变量覆盖了外层的tmp变量。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第二个问题：用来计数的循环变量泄露为全局变量</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">'hello'</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; s.length; i++) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(s[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(i); <span class="comment">// 5</span></span><br><span class="line"><span class="comment">//  上面代码中，变量i只用来控制循环，但是循环结束后，并没有消失，泄露成了全局变量</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="ES6的块级作用域"><a href="#ES6的块级作用域" class="headerlink" title="ES6的块级作用域"></a>ES6的块级作用域</h2><ul>
+<li>let实际上为javascript新增了块级作用域</li>
+<li>ES6允许块级作用域的任意嵌套</li>
+<li>内层作用域可以定义外层作用域的同名变量</li>
+</ul>
+<hr>
+<h2 id="块级作用域与函数声明"><a href="#块级作用域与函数声明" class="headerlink" title="块级作用域与函数声明"></a>块级作用域与函数声明</h2><ul>
+<li>ES6引入了块级作用域，明确允许在块级作用域中声明函数。ES6规定，块级作用域中，函数声明语句的行为类似于let，在快级作用域之外不可调用</li>
+<li>如果改变了块级作用域内声明的函数的处理规则，显然会对老代码产生很大影响，为了减轻因此产生的不兼容问题，ES6在附录B里规定，浏览器的的实现可以不遵守上面的规定，有自己的处理方式：<ul>
+<li>允许在块级作用域内声明函数</li>
+<li>函数声明类似于var，即会提升到全局作用域或函数作用域的顶部</li>
+<li>同时，函数声明还会提升到所在块级作用域的头部。</li>
+</ul>
+</li>
+<li><em>上面三条规则只对ES6的浏览器实现有效，其他环境不用遵守，还是将块级作用域的函数声明当作let处理</em></li>
+<li>考虑到环境导致的行为差异太大，应该避免在块级作用域内声明函数，如果确实需要，也应该写成函数表达式，而不是函数声明语句。</li>
+<li>ES6块级作用域必须有大括号，如果没有大括号，JavaScript引擎认为不存在块级作用域</li>
+</ul>
+<h1 id="3、const-命令"><a href="#3、const-命令" class="headerlink" title="3、const 命令"></a>3、const 命令</h1><h2 id="基本用法-1"><a href="#基本用法-1" class="headerlink" title="基本用法"></a>基本用法</h2><ul>
+<li>const声明一个只读的常量。一旦声明，常量的值就不能改变。</li>
+<li>const声明的变量不得改变值，这意味着，const一旦声明变量，就必须立即初始化，不能留到以后赋值。</li>
+<li>const的作用域与let命令相同：只在声明所在的块级作用域内有效。</li>
+<li>const命令声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用。</li>
+<li>const声明的常量，也与let一样不可重复声明。</li>
+</ul>
+<h2 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h2><p>const实际上保证的，并不是变量的值不得改动，认识变量指向的那个内存地址所保存的数据不得改动。遂于简单类型的数据(数字，字符串，布尔值)，值就保存在变量指向的那个内存地址，因此等同于常量，但对于复合类型的数据(主要是对象和数组)，变量指向的内存地址，保存的只是一个指向实际数据的指针，const只能保证这个指针是固定的(即总是指向另一个固定的地址)，至于它指向的数据结构是不是可变的，就完全不能控制了。因此，将一个对象声明为常量必须非常小心。</p>
+<p>Object.freeze ： 将对象冻结，使添加新属性不起作用。</p>
+<h1 id="4、顶层对象的属性"><a href="#4、顶层对象的属性" class="headerlink" title="4、顶层对象的属性"></a>4、顶层对象的属性</h1><ul>
+<li><p>顶层对象，在浏览器环境指的是window对象，在Node值得是global对象。ES5之中，顶层对象的属性与全局变量是等价的。</p>
+</li>
+<li><p>ES6一方面规定，为了保持兼容性，var命令和function命令声明的全局变量，依旧是顶层对象的属性；另一方面规定，let命令、const命令、class命令声明的全局变量，不属于顶层对象的属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="comment">// 如果在 Node 的 REPL 环境，可以写成 global.a</span></span><br><span class="line"><span class="comment">// 或者采用通用方法，写成 this.a</span></span><br><span class="line"><span class="built_in">window</span>.a <span class="comment">// 1</span></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">window</span>.b <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上面代码中，全局变量a为var命令声明，所以它是顶层对象的属性；全局变量b由let命令声明，所以它不是顶层对象的属性，返回undefined</p>
+</li>
+</ul>
+<h1 id="5、globalThis"><a href="#5、globalThis" class="headerlink" title="5、globalThis"></a>5、globalThis</h1><ul>
+<li>JavaScript语言存在一个顶层对象，它提供全局环境(即全局作用域)，所有代码都是在这个环境中运行。但是，顶层对象在各种实现里面是不统一的。<ul>
+<li>浏览器里，顶层对象是window，但Node和Web Worker没有window</li>
+<li>浏览器和 Web Worker 里面，self也指向顶层对象，但是 Node 没有self</li>
+<li>Node 里面，顶层对象是global，但其他环境都不支持</li>
+</ul>
+</li>
+<li>同一段代码为了能够在各种环境，都能取到顶层对象，现在一般是使用this变量，但是有局限性。<ul>
+<li>全局环境中，this会返回顶层对象。但是，Node 模块和 ES6 模块中，this返回的是当前模块。</li>
+<li>函数里面的this，如果函数不是作为对象的方法运行，而是单纯作为函数运行，this会指向顶层对象。但是，严格模式下，这时this会返回undefined。</li>
+<li>不管是严格模式，还是普通模式，new Function(‘return this’)()，总是会返回全局对象。但是，如果浏览器用了 CSP（Content Security Policy，内容安全策略），那么eval、new Function这些方法都可能无法使用。</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/06/ES6/" data-id="ck1lpqa930004m8vmg362tsbh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/09/瀑布流/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          瀑布流
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/05/正则表达式/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">正则表达式</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/26/JQuery/">JQuery</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/24/Class/">class</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/16/SQL语句/">SQL语句</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/15/PHP操作数据库/">PHP操作数据库</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

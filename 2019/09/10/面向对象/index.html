@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>面向对象 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="面向对象：(Object Briented Programing)，是一种相对面向过程的一种程序设计的思想  1、封装(保护了内部数据，隐藏内部的实现细节) 2、继承(代码复用) 3、多态(代码的灵活性)  类、实例子类、父类(字类继承了父类，可以复用父类的代码) 123456789function Person (name,age)&amp;#123;    this.name = name;    t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象">
+<meta property="og:url" content="http://yoursite.com/2019/09/10/面向对象/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="面向对象：(Object Briented Programing)，是一种相对面向过程的一种程序设计的思想  1、封装(保护了内部数据，隐藏内部的实现细节) 2、继承(代码复用) 3、多态(代码的灵活性)  类、实例子类、父类(字类继承了父类，可以复用父类的代码) 123456789function Person (name,age)&amp;#123;    this.name = name;    t">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://imgchr.com/i/n2ZVA0">
+<meta property="og:updated_time" content="2019-09-15T10:44:29.310Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面向对象">
+<meta name="twitter:description" content="面向对象：(Object Briented Programing)，是一种相对面向过程的一种程序设计的思想  1、封装(保护了内部数据，隐藏内部的实现细节) 2、继承(代码复用) 3、多态(代码的灵活性)  类、实例子类、父类(字类继承了父类，可以复用父类的代码) 123456789function Person (name,age)&amp;#123;    this.name = name;    t">
+<meta name="twitter:image" content="https://imgchr.com/i/n2ZVA0">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/10/面向对象/" class="article-date">
+  <time datetime="2019-09-10T00:43:41.000Z" itemprop="datePublished">2019-09-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      面向对象
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>面向对象：(Object Briented Programing)，是一种相对面向过程的一种程序设计的思想</p>
+<ul>
+<li>1、封装(保护了内部数据，隐藏内部的实现细节)</li>
+<li>2、继承(代码复用)</li>
+<li>3、多态(代码的灵活性)</li>
+</ul>
+<p>类、实例<br>子类、父类(字类继承了父类，可以复用父类的代码)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span> (<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.eat = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//  将eat放在Person的prototype上，所有使用Person neww处来的实例，就斗鱼eat方法；</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Person(<span class="string">'xiaoMing'</span>,<span class="number">18</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在new时，流览器帮我们做了以下的事;<ul>
+<li>1、创建一个对象。<ul>
+<li>该对象上有一个属性 <strong>proto</strong>(每个对象都有)，该属性，就是其构造函数的prototype</li>
+</ul>
+</li>
+<li>2、将构造函数内的this，指向这个对象(p).</li>
+<li>3、执行构造函数</li>
+<li>4、返回了这个对象</li>
+</ul>
+</li>
+</ul>
+<p>访问一个对象的属性时，现在对象本身上查找，如果找到，则直接返回该属性的值<br>如果没有，则会在对象的<strong>proto</strong>上查找</p>
+<p>prototype属性，只有函数有，其他对象没有<br>它是一个函数的属性，属性值为一个对象<br>使用该构造函数new处来的对象，都会共享prototype上的属性</p>
+<img src="https://imgchr.com/i/n2ZVA0">
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/10/面向对象/" data-id="ck1lpqaa7000wm8vmmnrq5p05" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/15/PHP/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          PHP
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/10/js动画/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">js动画</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/26/JQuery/">JQuery</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/24/Class/">class</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/16/SQL语句/">SQL语句</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/15/PHP操作数据库/">PHP操作数据库</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

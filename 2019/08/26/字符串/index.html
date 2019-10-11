@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>字符串对象 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="字符串对象字符串的创建定义：将基本类型的字符串，包装在一个对象中，便于我i们对字符串进行各种操作语法:  12345var str = new String(&apos;&apos;);console.log(typeof str);  //&apos;object&apos;var str = &apos;hello&apos;;typeof str  //&apos;string&apos;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串对象">
+<meta property="og:url" content="http://yoursite.com/2019/08/26/字符串/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="字符串对象字符串的创建定义：将基本类型的字符串，包装在一个对象中，便于我i们对字符串进行各种操作语法:  12345var str = new String(&apos;&apos;);console.log(typeof str);  //&apos;object&apos;var str = &apos;hello&apos;;typeof str  //&apos;string&apos;">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-27T02:16:32.974Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="字符串对象">
+<meta name="twitter:description" content="字符串对象字符串的创建定义：将基本类型的字符串，包装在一个对象中，便于我i们对字符串进行各种操作语法:  12345var str = new String(&apos;&apos;);console.log(typeof str);  //&apos;object&apos;var str = &apos;hello&apos;;typeof str  //&apos;string&apos;">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/26/字符串/" class="article-date">
+  <time datetime="2019-08-26T00:49:45.000Z" itemprop="datePublished">2019-08-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      字符串对象
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="字符串对象"><a href="#字符串对象" class="headerlink" title="字符串对象"></a>字符串对象</h1><h2 id="字符串的创建"><a href="#字符串的创建" class="headerlink" title="字符串的创建"></a>字符串的创建</h2><p><font size="4px">定义：将基本类型的字符串，包装在一个对象中，便于我i们对字符串进行各种操作</font><br>语法: </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">''</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str);  <span class="comment">//'object'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'hello'</span>;</span><br><span class="line"><span class="keyword">typeof</span> str  <span class="comment">//'string'</span></span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+<h2 id="length"><a href="#length" class="headerlink" title="length"></a>length</h2><blockquote>
+<p>数组的length可以更改<br>字符串对象的length不能更改</p>
+</blockquote>
+<h2 id="取得字符的方法"><a href="#取得字符的方法" class="headerlink" title="取得字符的方法"></a>取得字符的方法</h2><p>1、通过索引取得字符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'hello world'</span>;</span><br><span class="line">str[i]</span><br><span class="line"></span><br><span class="line">遍历字符串中的数组</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; str.length; i++ )&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arr[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、charAt(索引取得字符串)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str.charAt(<span class="number">6</span>);  <span class="comment">//'w'</span></span><br><span class="line">str.charAt(<span class="number">11</span>);  <span class="comment">//''</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="replace"><a href="#replace" class="headerlink" title=".replace"></a>.replace</h2><p>语法: .replace（’被替换的字符串’，’替换后的字符串’)<br>功能：</p>
+<ul>
+<li>将第一个参数的字符串，替换成第二个参数</li>
+<li>返回值：替换之后的字符串</li>
+<li>参数如果是字符串，则只能替换第一个匹配项</li>
+<li>可以让第一个参数是正则表达式，这样可以实现全局替换</li>
+</ul>
+<h2 id="字符串截取"><a href="#字符串截取" class="headerlink" title="字符串截取"></a>字符串截取</h2><ul>
+<li>.slice(开始位置，结束位置)                包前不包后</li>
+<li>.substring(开始位置，结束位置)            包前不包后</li>
+<li>.substr(开始位置，截取字符串的个数)</li>
+</ul>
+<h2 id="split"><a href="#split" class="headerlink" title=".split"></a>.split</h2><p>语法:.split(‘分隔符’)<br>功能：</p>
+<ul>
+<li>将字符串用参数指定的分隔符进行切割</li>
+<li>返回值：由切割之后的每一个部分组成的数组</li>
+</ul>
+<h1 id="String对象方法"><a href="#String对象方法" class="headerlink" title="String对象方法"></a>String对象方法</h1><table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">charAt()</td>
+<td align="left">返回在指定位置的值</td>
+</tr>
+<tr>
+<td align="left">charCodeAt()</td>
+<td align="left">返回在指定的位置的字符的Unicode编码</td>
+</tr>
+<tr>
+<td align="left">concat()</td>
+<td align="left">连接字符串</td>
+</tr>
+<tr>
+<td align="left">indexOf()</td>
+<td align="left">检索字符串</td>
+</tr>
+<tr>
+<td align="left">lastIndexOf</td>
+<td align="left">从后向前检索字符串</td>
+</tr>
+<tr>
+<td align="left">split()</td>
+<td align="left">把字符串分割为字符串数组</td>
+</tr>
+<tr>
+<td align="left">slice()</td>
+<td align="left">提取字符串的片段，并在新的字符串中返回被提取的部分。</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/26/字符串/" data-id="ck1lpqa9u000jm8vmrkbls0v3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/27/保佑/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          保佑
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/25/DOM/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">DOM</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/26/JQuery/">JQuery</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/24/Class/">class</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/16/SQL语句/">SQL语句</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/15/PHP操作数据库/">PHP操作数据库</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
