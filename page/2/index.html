@@ -281,6 +281,414 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/06/ES6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Joker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落笔成殇的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/06/ES6/" itemprop="url">ES6</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-06T20:37:20+08:00">
+                2019-09-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="1、let命令"><a href="#1、let命令" class="headerlink" title="1、let命令"></a>1、let命令</h1><h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><ul>
+<li>ES6新增了let命令，用来声明变量。它的用法类似于var。但是所声明的变量，只在let命令所在的代码块内有效。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    a&#123;i&#125; = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">a[<span class="number">6</span>]();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>上面代码中，变量i是var命令声明的，在全局范围内都有效，所以全局只有一个变量i。每一次循环，变量i的值都会发生改变，而循环内被赋给数组a的函数内部的console.log(i)，里面的i指向的就是全局的i。也就是说，所有数组a的成员里面的i，指向的都是同一个i，导致运行时输出的是最后一轮的i的值，也就是 10。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/06/ES6/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </li></ul></div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/05/正则表达式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Joker">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落笔成殇的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/05/正则表达式/" itemprop="url">正则表达式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-05T16:48:31+08:00">
+                2019-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="正则表达式中的特殊字符"><a href="#正则表达式中的特殊字符" class="headerlink" title="正则表达式中的特殊字符"></a>正则表达式中的特殊字符</h2><table>
+<thead>
+<tr>
+<th align="left">字符</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">\</td>
+<td align="left">1、在非特殊字符之前的反斜杠表示下一个字符是特殊字符，不能按照字面量理解。无论字符出现在哪里，如果前面加了’&#39;，将不再匹配任何字符，而是表示一个字符边界。  2、在特殊字符之前的反斜杠表示下一个字符不是特殊字符，应该按照字面理解。3、在字符串字面量中，反斜杠是反义字符。</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">匹配输入的开始，如果多行标志被设置为true，也匹配换行符后紧跟的位置</td>
+</tr>
+<tr>
+<td align="left">$</td>
+<td align="left">匹配输入的结束，如果多行标志被设置为true，也匹配换行符前的位置</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">匹配前一个表达式0次或多次，等价于{0，}</td>
+</tr>
+<tr>
+<td align="left">+</td>
+<td align="left">匹配前一个表达式1次或多次，等价于{1，}</td>
+</tr>
+<tr>
+<td align="left">？</td>
+<td align="left">匹配前一个表达式0次或1次，等价于{0，1}，还用于先行断言中，如x(?=y)和x(?!y)</td>
+</tr>
+<tr>
+<td align="left">.</td>
+<td align="left">(小数点)默认匹配除换行符之外的任何单个字符</td>
+</tr>
+<tr>
+<td align="left">(x)</td>
+<td align="left">匹配’x’并记住匹配项，括号被称之为捕获括号</td>
+</tr>
+<tr>
+<td align="left">(?:x)</td>
+<td align="left">匹配’x’但是不记住匹配项。这种括号叫做非捕获括号，是的能够定义与正则表达式运算符一起使用的子表达式。例如：/foo{1,2}/,{1,2}只应用于’foo’的最后一个字符’o’;/(?:foo){1,2}/，{1,2}会应用于整个’foo’单词</td>
+</tr>
+<tr>
+<td align="left">x(?=y)</td>
+<td align="left">匹配’x’仅仅当’x’后跟着’y’，这种叫做先行断言</td>
+</tr>
+<tr>
+<td align="left">(?&lt;=y)x</td>
+<td align="left">匹配’x’仅仅当’x’前面是’y’，这种叫做后行断言</td>
+</tr>
+<tr>
+<td align="left">x(?!y)</td>
+<td align="left">仅仅当’x’后面不跟着’y’时匹配’x’，这被称之为正向否定查找。例如：/\d+(?!.)/.exec(‘3.141’)匹配’141’而不是u’3.141’</td>
+</tr>
+<tr>
+<td align="left">(?&lt;!y)x</td>
+<td align="left">仅仅当’x’前面不是’y’时撇皮’x’，这杯称之为反向否定查找</td>
+</tr>
+<tr>
+<td align="left">x</td>
+<td align="left">y</td>
+</tr>
+<tr>
+<td align="left">{n}</td>
+<td align="left">n是一个正整数，匹配了前面一个字符刚好出现了n次</td>
+</tr>
+<tr>
+<td align="left">{n,}</td>
+<td align="left">n是一个正整数，匹配前一个字符至少出现了n次</td>
+</tr>
+<tr>
+<td align="left">{n,m}</td>
+<td align="left">n和m都是整数，匹配前面的字符至少n次，最多m次。如果n或者m的值是0，这个值被忽略</td>
+</tr>
+<tr>
+<td align="left">[xyz]</td>
+<td align="left">一个字符集合，匹配方括号中的任意字符，包括转义序列。你可以使用破折号(-)来指定一个字符范围，</td>
+</tr>
+<tr>
+<td align="left">[^xyz]</td>
+<td align="left">一个反向字符集，匹配任何没有包含方括号中的字符，</td>
+</tr>
+<tr>
+<td align="left">[^\b]</td>
+<td align="left">匹配一个退格(U+0008)</td>
+</tr>
+<tr>
+<td align="left">\b</td>
+<td align="left">匹配一个词的开始或结束，使用”moon”举例：/\bm/匹配“moon”中的‘m’；/oo\b/并不匹配”moon”中的’oo’，因为’oo’被一个“字”字符’n’紧跟着。/oon\b/匹配”moon”中的’oon’，因为’oon’是这个字符串的结束部分。这样他没有被一个“字”字符紧跟着。/\w\b\w/将不能匹配任何字符串，因为在一个单词中间的字符永远也不可能同时满足没有“字”字符跟随和有“字”字符跟随两种情况。</td>
+</tr>
+<tr>
+<td align="left">\B</td>
+<td align="left">匹配一个非单词边界。1、字符串第一个字符为非’字’字符；2、字符串最后一个字符为非’字’字符；3、两个单词字符之间；4、两个非单词字符之间；5、空字符串</td>
+</tr>
+<tr>
+<td align="left">\cX</td>
+<td align="left">当X是处于A到Z之间的字符的时候，匹配字符串中的一个控制符</td>
+</tr>
+<tr>
+<td align="left">\d</td>
+<td align="left">匹配一个数字，等价于[0-9]</td>
+</tr>
+<tr>
+<td align="left">\D</td>
+<td align="left">匹配一个非数字字符，等价于[^0-9]</td>
+</tr>
+<tr>
+<td align="left">\f</td>
+<td align="left">匹配一个换页符</td>
+</tr>
+<tr>
+<td align="left">\n</td>
+<td align="left">匹配一个换行符</td>
+</tr>
+<tr>
+<td align="left">\r</td>
+<td align="left">匹配一个回车符</td>
+</tr>
+<tr>
+<td align="left">\s</td>
+<td align="left">匹配一个空白字符，包括空格、制表符、换页符和换行符。等价于[ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</td>
+</tr>
+<tr>
+<td align="left">\S</td>
+<td align="left">匹配一个非空白字符，等价于[^ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</td>
+</tr>
+<tr>
+<td align="left">\t</td>
+<td align="left">匹配一个水平制表符 (U+0009)。</td>
+</tr>
+<tr>
+<td align="left">\v</td>
+<td align="left">匹配一个垂直制表符 (U+000B)。</td>
+</tr>
+<tr>
+<td align="left">\w</td>
+<td align="left">匹配一个单字字符，(字符、数字或者下划线)。等价于[a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td align="left">\W</td>
+<td align="left">匹配一个非单词字符，[^a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td align="left">\n</td>
+<td align="left">在正则表达式中，它返货最后的第n个捕获匹配的子字符串(捕获的数目以左括号计数)</td>
+</tr>
+<tr>
+<td align="left">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/05/正则表达式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </td></tr></tbody></table></div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/03/事件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1338,270 +1746,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/26/字符串/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Joker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落笔成殇的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/26/字符串/" itemprop="url">字符串对象</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-26T08:49:45+08:00">
-                2019-08-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="字符串对象"><a href="#字符串对象" class="headerlink" title="字符串对象"></a>字符串对象</h1><h2 id="字符串的创建"><a href="#字符串的创建" class="headerlink" title="字符串的创建"></a>字符串的创建</h2><p><font size="4px">定义：将基本类型的字符串，包装在一个对象中，便于我i们对字符串进行各种操作</font><br>语法: </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">''</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str);  <span class="comment">//'object'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'hello'</span>;</span><br><span class="line"><span class="keyword">typeof</span> str  <span class="comment">//'string'</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/08/26/字符串/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/25/DOM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Joker">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落笔成殇的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/25/DOM/" itemprop="url">DOM</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-25T20:42:09+08:00">
-                2019-08-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="HTML-DOM"><a href="#HTML-DOM" class="headerlink" title="HTML DOM"></a>HTML DOM</h1><p>##DOM节点</p>
-<blockquote>
-<p>根据W3C的HTML DOM标准，HTMl文档中所有的内容都是节点：</p>
-</blockquote>
-<ul>
-<li>整个文档都是一个文档节点</li>
-<li>整个HTML元素都是元素节点</li>
-<li>HTML元素内的文本是文本节点</li>
-<li>整个HTML属性是属性节点</li>
-<li>注释是注释节点
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/08/25/DOM/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </li></ul></div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1652,7 +1796,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
