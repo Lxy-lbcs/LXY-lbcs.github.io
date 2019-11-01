@@ -81,14 +81,17 @@
 
 
 
+<meta name="description" content="mongodb安装 -&amp;gt; 在命令行中，打开数据库服务： mongod.exe –dbpath = 存放数据库路径 -&amp;gt; 回车执行。(保持命令行开启状态) 命令行操作1、DB12345678910111213141516171819- 1、Help查看命令提示    - help  - db.help()  - de.test.help()  - db.test.find().help(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mongodb">
 <meta property="og:url" content="http://yoursite.com/2019/10/24/mongodb/index.html">
 <meta property="og:site_name" content="落笔成殇的博客">
+<meta property="og:description" content="mongodb安装 -&amp;gt; 在命令行中，打开数据库服务： mongod.exe –dbpath = 存放数据库路径 -&amp;gt; 回车执行。(保持命令行开启状态) 命令行操作1、DB12345678910111213141516171819- 1、Help查看命令提示    - help  - db.help()  - de.test.help()  - db.test.find().help(">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-24T03:17:01.539Z">
+<meta property="og:updated_time" content="2019-10-24T04:43:18.271Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongodb">
+<meta name="twitter:description" content="mongodb安装 -&amp;gt; 在命令行中，打开数据库服务： mongod.exe –dbpath = 存放数据库路径 -&amp;gt; 回车执行。(保持命令行开启状态) 命令行操作1、DB12345678910111213141516171819- 1、Help查看命令提示    - help  - db.help()  - de.test.help()  - db.test.find().help(">
 
 
 
@@ -348,7 +351,36 @@
       
 
       
-        
+        <p>mongodb安装 -&gt; 在命令行中，打开数据库服务： mongod.exe –dbpath = 存放数据库路径 -&gt; 回车执行。(保持命令行开启状态)</p>
+<h1 id="命令行操作"><a href="#命令行操作" class="headerlink" title="命令行操作"></a>命令行操作</h1><h2 id="1、DB"><a href="#1、DB" class="headerlink" title="1、DB"></a>1、DB</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">- <span class="number">1</span>、Help查看命令提示  </span><br><span class="line">  - help</span><br><span class="line">  - db.help()</span><br><span class="line">  - de.test.help()</span><br><span class="line">  - db.test.find().help()</span><br><span class="line">- <span class="number">2</span>、创建/切换数据库</span><br><span class="line">  - use music(数据库名字)</span><br><span class="line">- <span class="number">3</span>、查询数据库</span><br><span class="line">  - show dbs</span><br><span class="line">- <span class="number">4</span>、查看当前使用过的数据库</span><br><span class="line">  - db/db.getName()</span><br><span class="line">- <span class="number">5</span>、显示当前的DB状态</span><br><span class="line">  - db.stats()</span><br><span class="line">- <span class="number">6</span>、查看当亲啊的DB版本</span><br><span class="line">  - db.version()</span><br><span class="line">- <span class="number">7</span>、查看当前DB的链接机器地址</span><br><span class="line">  - db.getMongo()</span><br><span class="line">- <span class="number">8</span>、删除数据库</span><br><span class="line">  - db.dropDatabase()</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、集合"><a href="#2、集合" class="headerlink" title="2、集合"></a>2、集合</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- <span class="number">1</span>、创一个聚集集合</span><br><span class="line">  - db.createCollection(<span class="string">'collName(users)'</span>,&#123;<span class="attr">size</span>: <span class="number">5242880</span>,<span class="attr">capped</span>:<span class="literal">true</span>,&gt;max:<span class="number">5000</span>&#125;); 最大存储空间为<span class="number">5</span>m，最多<span class="number">5000</span>个文档的集合</span><br><span class="line">- <span class="number">2</span>、得到指定名称的聚集集合</span><br><span class="line">  - db.getCollection(<span class="string">"account"</span>);</span><br><span class="line">- <span class="number">3</span>、得到当前db的所有聚集集合</span><br><span class="line">  - db.getCollectionName();</span><br><span class="line">- <span class="number">4</span>、显示当前db的所有聚集的状态</span><br><span class="line">  - db.printCollectionStats();</span><br><span class="line">- <span class="number">5</span>、删除</span><br><span class="line">  - db.users.drop();</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、文档"><a href="#3、文档" class="headerlink" title="3、文档"></a>3、文档</h2><ul>
+<li>1、添加<ul>
+<li>db.users.save({name:’lbcs’,age:25,sex:true});</li>
+<li>db.users.save([{name:’lbcs’,age:25}，{name:’zhangsan’,age:100}]);</li>
+</ul>
+</li>
+<li>2、修改<ul>
+<li>db.users.update({age:25},{$set:{name:’zhangsan’}},false(如果数据不存在，是否插入，默认false),true(是否更新所有记录，默认false));</li>
+<li>db.users.updaye({name:’lbcs’},{$inc(age += 50)):{age:50}},false,true)<ul>
+<li>db.users.update({name:’lbcs’},{$ind:{age:50},$set:{name:’zhangsan’}},false,true)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3、删除<ul>
+<li>db.users.remove({age:132});</li>
+<li>db.users.remove({}) //删除所有</li>
+</ul>
+</li>
+<li>4、查询<ul>
+<li>db.users.find()</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
     
@@ -390,6 +422,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/30/Vue整理/" rel="prev" title="Vue整理">
+                Vue整理 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -441,8 +477,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -457,7 +502,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -491,6 +536,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#命令行操作"><span class="nav-number">1.</span> <span class="nav-text">命令行操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、DB"><span class="nav-number">1.1.</span> <span class="nav-text">1、DB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、集合"><span class="nav-number">1.2.</span> <span class="nav-text">2、集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、文档"><span class="nav-number">1.3.</span> <span class="nav-text">3、文档</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

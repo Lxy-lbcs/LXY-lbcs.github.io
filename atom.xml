@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-24T03:17:01.539Z</updated>
+  <updated>2019-10-30T11:41:38.357Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vue整理</title>
+    <link href="http://yoursite.com/2019/10/30/Vue%E6%95%B4%E7%90%86/"/>
+    <id>http://yoursite.com/2019/10/30/Vue整理/</id>
+    <published>2019-10-30T11:32:15.000Z</published>
+    <updated>2019-10-30T11:41:38.357Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一、Vue模板语法"><a href="#一、Vue模板语法" class="headerlink" title="一、Vue模板语法"></a>一、Vue模板语法</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;一、Vue模板语法&quot;&gt;&lt;a href=&quot;#一、Vue模板语法&quot; class=&quot;headerlink&quot; title=&quot;一、Vue模板语法&quot;&gt;&lt;/a&gt;一、Vue模板语法&lt;/h1&gt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>mongodb</title>
     <link href="http://yoursite.com/2019/10/24/mongodb/"/>
     <id>http://yoursite.com/2019/10/24/mongodb/</id>
     <published>2019-10-24T03:17:01.000Z</published>
-    <updated>2019-10-24T03:17:01.539Z</updated>
+    <updated>2019-10-24T04:43:18.271Z</updated>
+    
+    <content type="html"><![CDATA[<p>mongodb安装 -&gt; 在命令行中，打开数据库服务： mongod.exe –dbpath = 存放数据库路径 -&gt; 回车执行。(保持命令行开启状态)</p><h1 id="命令行操作"><a href="#命令行操作" class="headerlink" title="命令行操作"></a>命令行操作</h1><h2 id="1、DB"><a href="#1、DB" class="headerlink" title="1、DB"></a>1、DB</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">- <span class="number">1</span>、Help查看命令提示  </span><br><span class="line">  - help</span><br><span class="line">  - db.help()</span><br><span class="line">  - de.test.help()</span><br><span class="line">  - db.test.find().help()</span><br><span class="line">- <span class="number">2</span>、创建/切换数据库</span><br><span class="line">  - use music(数据库名字)</span><br><span class="line">- <span class="number">3</span>、查询数据库</span><br><span class="line">  - show dbs</span><br><span class="line">- <span class="number">4</span>、查看当前使用过的数据库</span><br><span class="line">  - db/db.getName()</span><br><span class="line">- <span class="number">5</span>、显示当前的DB状态</span><br><span class="line">  - db.stats()</span><br><span class="line">- <span class="number">6</span>、查看当亲啊的DB版本</span><br><span class="line">  - db.version()</span><br><span class="line">- <span class="number">7</span>、查看当前DB的链接机器地址</span><br><span class="line">  - db.getMongo()</span><br><span class="line">- <span class="number">8</span>、删除数据库</span><br><span class="line">  - db.dropDatabase()</span><br></pre></td></tr></table></figure><h2 id="2、集合"><a href="#2、集合" class="headerlink" title="2、集合"></a>2、集合</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- <span class="number">1</span>、创一个聚集集合</span><br><span class="line">  - db.createCollection(<span class="string">'collName(users)'</span>,&#123;<span class="attr">size</span>: <span class="number">5242880</span>,<span class="attr">capped</span>:<span class="literal">true</span>,&gt;max:<span class="number">5000</span>&#125;); 最大存储空间为<span class="number">5</span>m，最多<span class="number">5000</span>个文档的集合</span><br><span class="line">- <span class="number">2</span>、得到指定名称的聚集集合</span><br><span class="line">  - db.getCollection(<span class="string">"account"</span>);</span><br><span class="line">- <span class="number">3</span>、得到当前db的所有聚集集合</span><br><span class="line">  - db.getCollectionName();</span><br><span class="line">- <span class="number">4</span>、显示当前db的所有聚集的状态</span><br><span class="line">  - db.printCollectionStats();</span><br><span class="line">- <span class="number">5</span>、删除</span><br><span class="line">  - db.users.drop();</span><br></pre></td></tr></table></figure><h2 id="3、文档"><a href="#3、文档" class="headerlink" title="3、文档"></a>3、文档</h2><ul><li>1、添加<ul><li>db.users.save({name:’lbcs’,age:25,sex:true});</li><li>db.users.save([{name:’lbcs’,age:25}，{name:’zhangsan’,age:100}]);</li></ul></li><li>2、修改<ul><li>db.users.update({age:25},{$set:{name:’zhangsan’}},false(如果数据不存在，是否插入，默认false),true(是否更新所有记录，默认false));</li><li>db.users.updaye({name:’lbcs’},{$inc(age += 50)):{age:50}},false,true)<ul><li>db.users.update({name:’lbcs’},{$ind:{age:50},$set:{name:’zhangsan’}},false,true)</li></ul></li></ul></li><li>3、删除<ul><li>db.users.remove({age:132});</li><li>db.users.remove({}) //删除所有</li></ul></li><li>4、查询<ul><li>db.users.find()</li></ul></li></ul>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;mongodb安装 -&amp;gt; 在命令行中，打开数据库服务： mongod.exe –dbpath = 存放数据库路径 -&amp;gt; 回车执行。(保持命令行开启状态)&lt;/p&gt;
+&lt;h1 id=&quot;命令行操作&quot;&gt;&lt;a href=&quot;#命令行操作&quot; class=&quot;headerlink&quot;
+      
     
     </summary>
     
@@ -586,30 +616,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;写的及其麻烦的一个钟表，只为了把新学到的知识用一下，在顺带复习复习。&quot;&gt;&lt;a href=&quot;#写的及其麻烦的一个钟表，只为了把新学到的知识用一下，在顺带复习复习。&quot; class=&quot;headerlink&quot; title=&quot;写的及其麻烦的一个钟表，只为了把新学到的知识用一下，在顺带复习复习。&quot;&gt;&lt;/a&gt;写的及其麻烦的一个钟表，只为了把新学到的知识用一下，在顺带复习复习。&lt;/h2&gt;
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>保佑</title>
-    <link href="http://yoursite.com/2019/08/27/%E4%BF%9D%E4%BD%91/"/>
-    <id>http://yoursite.com/2019/08/27/保佑/</id>
-    <published>2019-08-27T11:07:05.000Z</published>
-    <updated>2019-08-27T11:10:06.665Z</updated>
-    
-    <content type="html"><![CDATA[<pre><code class="js">                   _ooOoo_                  o8888888o                  <span class="number">88</span><span class="string">" . "</span><span class="number">88</span>                  (| -_- |)                  O\  =  <span class="regexp">/O</span><span class="regexp">               ____/</span><span class="string">`---'\____</span><span class="string">             .'  \\|     |//  `</span>.            /  \\|||  :  |||<span class="comment">//  \</span>           /  _||||| -:- |||||-  \           |   | \\\  -  <span class="comment">/// |   |</span>           | \_|  <span class="string">''</span>\---<span class="regexp">/''  |   |</span><span class="regexp">           \  .-\__  `-`  ___/</span>-. /         ___<span class="string">`. .'  /--.--\  `</span>. .       .<span class="string">""</span> <span class="string">'&lt;  `.___\_&lt;|&gt;_/___.'</span>  &gt;<span class="string">'"".</span><span class="string">     | | :  `- \`.;`\ _ /`;.`/ - ` : | |</span><span class="string">     \  \ `-.   \_ __\ /__ _/   .-` /  /</span><span class="string">======`-.____`-.___\_____/___.-`____.-'</span>======                   <span class="string">`=---='</span><span class="string">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><span class="string"></span><span class="string">      佛祖保佑      永无BUG      永不修改</span><span class="string"></span><span class="string">                   佛曰:</span><span class="string">         写字楼里写字间，写字间里程序员；</span><span class="string"></span><span class="string">         程序人员写程序，又拿程序换酒钱。</span><span class="string"></span><span class="string">         酒醒只在网上坐，酒醉还来网下眠；</span><span class="string"></span><span class="string">         酒醉酒醒日复日，网上网下年复年。</span><span class="string"></span><span class="string">         但愿老死电脑间，不愿鞠躬老板前；</span><span class="string"></span><span class="string">         奔驰宝马贵者趣，公交自行程序员。</span><span class="string"></span><span class="string">         别人笑我忒疯癫，我笑自己命太贱；</span><span class="string"></span><span class="string">         不见满街漂亮妹，哪个归得程序员？</span></code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;pre&gt;&lt;code class=&quot;js&quot;&gt;                   _ooOoo_
-                  o8888888o
-                  &lt;span class=&quot;number&quot;&gt;88&lt;/span&gt;&lt;span class=&quot;st
-      
     
     </summary>
     
